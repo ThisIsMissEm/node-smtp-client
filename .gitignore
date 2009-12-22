@@ -1,2 +1,2 @@
-# remove private demo config.
-demo/config.js
+# remove private demo config
+config/config.js
