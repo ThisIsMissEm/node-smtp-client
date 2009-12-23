@@ -8,6 +8,4 @@ var config = require("./config");
 
 var demo = smtp.create(config.port, config.address);
 
-demo.starttls();
-
 demo.connect(config.helo, config.user, config.secret, config.authtype);
