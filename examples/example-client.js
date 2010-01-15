@@ -17,5 +17,9 @@ client.addOnce("idle", function(){
 });
 
 client.addOnce("idle", function(){
-	client.quit();
+	client.rcpt(config.to);
 });
+
+/*client.addOnce("idle", function(){
+	client.quit();
+});*/

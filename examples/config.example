@@ -11,3 +11,4 @@ var config = exports;
 config.port = 25;
 config.host = "smtp.server.com";
 config.from = "test@server.com";
+config.to = "test@server2.com";
