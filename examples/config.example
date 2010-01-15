@@ -1,0 +1,12 @@
+/*===============================================
+	File:      config.example
+	
+	Author:    Micheil Smith
+	Description:
+		Example config file
+===============================================*/
+
+var config = exports;
+
+config.port = 25;
+config.host = "smtp.server.com";
