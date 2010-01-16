@@ -1,0 +1,3 @@
+[submodule "lib/vendor/Queue"]
+	path = lib/vendor/Queue
+	url = git://github.com/Miksago/Queue.js.git
