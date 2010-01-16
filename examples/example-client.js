@@ -18,8 +18,11 @@ client.addOnce("idle", function(){
 
 client.addOnce("idle", function(){
 	client.rcpt(config.to);
+	
+	client.addOnce("idle", function(){
+		client.data("config.to");
+	});
 });
-
 /*client.addOnce("idle", function(){
 	client.quit();
 });*/
