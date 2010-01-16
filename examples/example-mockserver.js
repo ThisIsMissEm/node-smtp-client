@@ -1,3 +1,4 @@
+/* -*- Mode: JavaScript; tab-width: 2; indent-tabs-mode: nil -*- */
 /*===============================================
 	File:      example-mockserver.js
 	
