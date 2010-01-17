@@ -1,0 +1,2056 @@
+%PDF-1.3
+3 0 obj
+<<
+/Length 4 0 R
+>>
+stream
+BT /F1 10 Tf 75 710 Td (
+) Tj ET
+BT /F1 10 Tf 75 698 Td (
+) Tj ET
+BT /F1 10 Tf 75 686 Td (
+) Tj ET
+BT /F1 10 Tf 75 674 Td (
+) Tj ET
+BT /F1 10 Tf 75 662 Td (
+) Tj ET
+BT /F1 10 Tf 75 650 Td (
+) Tj ET
+BT /F1 10 Tf 75 638 Td (Network Working Group                                          T. Hansen
+) Tj ET
+BT /F1 10 Tf 75 626 Td (Request for Comments: 5248                             AT&T Laboratories
+) Tj ET
+BT /F1 10 Tf 75 614 Td (BCP: 138                                                      J. Klensin
+) Tj ET
+BT /F1 10 Tf 75 602 Td (Updates: 3463, 4468, 4954                                      June 2008
+) Tj ET
+BT /F1 10 Tf 75 590 Td (Category: Best Current Practice
+) Tj ET
+BT /F1 10 Tf 75 578 Td (
+) Tj ET
+BT /F1 10 Tf 75 566 Td (
+) Tj ET
+BT /F1 10 Tf 75 554 Td (         A Registry for SMTP Enhanced Mail System Status Codes
+) Tj ET
+BT /F1 10 Tf 75 542 Td (
+) Tj ET
+BT /F1 10 Tf 75 530 Td (Status of This Memo
+) Tj ET
+BT /F1 10 Tf 75 518 Td (
+) Tj ET
+BT /F1 10 Tf 75 506 Td (   This document specifies an Internet Best Current Practices for the
+) Tj ET
+BT /F1 10 Tf 75 494 Td (   Internet Community, and requests discussion and suggestions for
+) Tj ET
+BT /F1 10 Tf 75 482 Td (   improvements.  Distribution of this memo is unlimited.
+) Tj ET
+BT /F1 10 Tf 75 470 Td (
+) Tj ET
+BT /F1 10 Tf 75 458 Td (Abstract
+) Tj ET
+BT /F1 10 Tf 75 446 Td (
+) Tj ET
+BT /F1 10 Tf 75 434 Td (   The specification for enhanced mail system status codes, RFC 3463,
+) Tj ET
+BT /F1 10 Tf 75 422 Td (   establishes a new code model and lists a collection of status codes.
+) Tj ET
+BT /F1 10 Tf 75 410 Td (   While it anticipated that more codes would be added over time, it did
+) Tj ET
+BT /F1 10 Tf 75 398 Td (   not provide an explicit mechanism for registering and tracking those
+) Tj ET
+BT /F1 10 Tf 75 386 Td (   codes.  This document specifies an IANA registry for mail system
+) Tj ET
+BT /F1 10 Tf 75 374 Td (   enhanced status codes, and initializes that registry with the codes
+) Tj ET
+BT /F1 10 Tf 75 362 Td (   so far established in published standards-track documents, as well as
+) Tj ET
+BT /F1 10 Tf 75 350 Td (   other codes that have become established in the industry.
+) Tj ET
+BT /F1 10 Tf 75 338 Td (
+) Tj ET
+BT /F1 10 Tf 75 326 Td (Table of Contents
+) Tj ET
+BT /F1 10 Tf 75 314 Td (
+) Tj ET
+BT /F1 10 Tf 75 302 Td (   1.  Introduction  . . . . . . . . . . . . . . . . . . . . . . . . . 2
+) Tj ET
+BT /F1 10 Tf 75 290 Td (   2.  IANA Considerations . . . . . . . . . . . . . . . . . . . . . . 2
+) Tj ET
+BT /F1 10 Tf 75 278 Td (     2.1.  SMTP Enhanced Status Codes Registry . . . . . . . . . . . . 2
+) Tj ET
+BT /F1 10 Tf 75 266 Td (     2.2.  Review Process for New Values . . . . . . . . . . . . . . . 4
+) Tj ET
+BT /F1 10 Tf 75 254 Td (     2.3.  Registration Updates  . . . . . . . . . . . . . . . . . . . 4
+) Tj ET
+BT /F1 10 Tf 75 242 Td (     2.4.  Initial Values  . . . . . . . . . . . . . . . . . . . . . . 5
+) Tj ET
+BT /F1 10 Tf 75 230 Td (   3.  Security Considerations . . . . . . . . . . . . . . . . . . . . 8
+) Tj ET
+BT /F1 10 Tf 75 218 Td (   4.  Acknowledgements  . . . . . . . . . . . . . . . . . . . . . . . 9
+) Tj ET
+BT /F1 10 Tf 75 206 Td (   5.  References  . . . . . . . . . . . . . . . . . . . . . . . . . . 9
+) Tj ET
+BT /F1 10 Tf 75 194 Td (     5.1.  Normative References  . . . . . . . . . . . . . . . . . . . 9
+) Tj ET
+BT /F1 10 Tf 75 182 Td (     5.2.  Informative References  . . . . . . . . . . . . . . . . . . 9
+) Tj ET
+BT /F1 10 Tf 75 170 Td (
+) Tj ET
+BT /F1 10 Tf 75 158 Td (
+) Tj ET
+BT /F1 10 Tf 75 146 Td (
+) Tj ET
+BT /F1 10 Tf 75 134 Td (
+) Tj ET
+BT /F1 10 Tf 75 122 Td (
+) Tj ET
+BT /F1 10 Tf 75 110 Td (
+) Tj ET
+BT /F1 10 Tf 75 98 Td (
+) Tj ET
+BT /F1 10 Tf 75 86 Td (
+) Tj ET
+BT /F1 10 Tf 75 74 Td (
+) Tj ET
+BT /F1 10 Tf 75 62 Td (
+) Tj ET
+BT /F1 10 Tf 75 50 Td (
+) Tj ET
+BT /F1 10 Tf 75 38 Td (
+) Tj ET
+BT /F1 10 Tf 75 26 Td (Hansen & Klensin         Best Current Practice                  [Page 1]
+) Tj ET
+endstream
+endobj
+
+4 0 obj
+3940
+endobj
+
+6 0 obj
+<<
+/Length 7 0 R
+>>
+stream
+BT /F1 10 Tf 75 710 Td (RFC 5248           SMTP Enhanced Status Code Registry          June 2008
+) Tj ET
+BT /F1 10 Tf 75 698 Td (
+) Tj ET
+BT /F1 10 Tf 75 686 Td (
+) Tj ET
+BT /F1 10 Tf 75 674 Td (1.  Introduction
+) Tj ET
+BT /F1 10 Tf 75 662 Td (
+) Tj ET
+BT /F1 10 Tf 75 650 Td (   Enhanced Status Codes for SMTP were first defined in [RFC1893], which
+) Tj ET
+BT /F1 10 Tf 75 638 Td (   was subsequently replaced by [RFC3463].  While it anticipated that
+) Tj ET
+BT /F1 10 Tf 75 626 Td (   more codes would be added over time \\(see section 2 of [RFC3463]\\), it
+) Tj ET
+BT /F1 10 Tf 75 614 Td (   did not provide an explicit mechanism for registering and tracking
+) Tj ET
+BT /F1 10 Tf 75 602 Td (   those codes.  Since then, various RFCs have been published and
+) Tj ET
+BT /F1 10 Tf 75 590 Td (   internet drafts proposed that define additional status codes.
+) Tj ET
+BT /F1 10 Tf 75 578 Td (   However, without an IANA registry, conflicts in definitions have
+) Tj ET
+BT /F1 10 Tf 75 566 Td (   begun to appear.
+) Tj ET
+BT /F1 10 Tf 75 554 Td (
+) Tj ET
+BT /F1 10 Tf 75 542 Td (   This RFC defines such an IANA registry and was written to help
+) Tj ET
+BT /F1 10 Tf 75 530 Td (   prevent further conflicts from appearing in the future.  It
+) Tj ET
+BT /F1 10 Tf 75 518 Td (   initializes the registry with the established standards-track
+) Tj ET
+BT /F1 10 Tf 75 506 Td (   enhanced status codes from [RFC3463], [RFC3886], [RFC4468], and
+) Tj ET
+BT /F1 10 Tf 75 494 Td (   [RFC4954].  In addition, this document adds several codes to the
+) Tj ET
+BT /F1 10 Tf 75 482 Td (   registry that were established by various internet drafts and have
+) Tj ET
+BT /F1 10 Tf 75 470 Td (   come into common use, despite the expiration of the documents
+) Tj ET
+BT /F1 10 Tf 75 458 Td (   themselves.
+) Tj ET
+BT /F1 10 Tf 75 446 Td (
+) Tj ET
+BT /F1 10 Tf 75 434 Td (   As specified in [RFC3463], an enhanced status code consists of a
+) Tj ET
+BT /F1 10 Tf 75 422 Td (   three-part code, with each part being numeric and separated by a
+) Tj ET
+BT /F1 10 Tf 75 410 Td (   period character.  The three portions are known as the class sub-
+) Tj ET
+BT /F1 10 Tf 75 398 Td (   code, the subject sub-code, and the detail sub-code.  In the tables,
+) Tj ET
+BT /F1 10 Tf 75 386 Td (   a wildcard for the class sub-code is represented by an X, a wildcard
+) Tj ET
+BT /F1 10 Tf 75 374 Td (   for a subject sub-code is represented by an XXX, and a wildcard for a
+) Tj ET
+BT /F1 10 Tf 75 362 Td (   detail sub-code is represented by a YYY.  For example, 3.XXX.YYY has
+) Tj ET
+BT /F1 10 Tf 75 350 Td (   an unspecified subject sub-code and an unspecified status code, and
+) Tj ET
+BT /F1 10 Tf 75 338 Td (   X.5.0 is has an unspecified class sub-code.  \\(This is a change from
+) Tj ET
+BT /F1 10 Tf 75 326 Td (   [RFC3463], which uses XXX for both the subject sub-code and detail
+) Tj ET
+BT /F1 10 Tf 75 314 Td (   sub-code wildcards.\\)
+) Tj ET
+BT /F1 10 Tf 75 302 Td (
+) Tj ET
+BT /F1 10 Tf 75 290 Td (2.  IANA Considerations
+) Tj ET
+BT /F1 10 Tf 75 278 Td (
+) Tj ET
+BT /F1 10 Tf 75 266 Td (2.1.  SMTP Enhanced Status Codes Registry
+) Tj ET
+BT /F1 10 Tf 75 254 Td (
+) Tj ET
+BT /F1 10 Tf 75 242 Td (   IANA has created the registry "SMTP Enhanced Status Codes".  The SMTP
+) Tj ET
+BT /F1 10 Tf 75 230 Td (   Enhanced Status Codes registry will have three tables:
+) Tj ET
+BT /F1 10 Tf 75 218 Td (
+) Tj ET
+BT /F1 10 Tf 75 206 Td (   o  Class Sub-Codes
+) Tj ET
+BT /F1 10 Tf 75 194 Td (      Each of the entries in this table represent class sub-codes and
+) Tj ET
+BT /F1 10 Tf 75 182 Td (      all have an unspecified subject sub-code and an unspecified detail
+) Tj ET
+BT /F1 10 Tf 75 170 Td (      sub-code.
+) Tj ET
+BT /F1 10 Tf 75 158 Td (
+) Tj ET
+BT /F1 10 Tf 75 146 Td (   o  Subject Sub-Codes
+) Tj ET
+BT /F1 10 Tf 75 134 Td (      Each of the entries in this table represent subject sub-codes and
+) Tj ET
+BT /F1 10 Tf 75 122 Td (      all have an unspecified class sub-code and an unspecified detail
+) Tj ET
+BT /F1 10 Tf 75 110 Td (      sub-code.
+) Tj ET
+BT /F1 10 Tf 75 98 Td (
+) Tj ET
+BT /F1 10 Tf 75 86 Td (
+) Tj ET
+BT /F1 10 Tf 75 74 Td (
+) Tj ET
+BT /F1 10 Tf 75 62 Td (Hansen & Klensin         Best Current Practice                  [Page 2]
+) Tj ET
+endstream
+endobj
+
+7 0 obj
+4214
+endobj
+
+9 0 obj
+<<
+/Length 10 0 R
+>>
+stream
+BT /F1 10 Tf 75 710 Td (RFC 5248           SMTP Enhanced Status Code Registry          June 2008
+) Tj ET
+BT /F1 10 Tf 75 698 Td (
+) Tj ET
+BT /F1 10 Tf 75 686 Td (
+) Tj ET
+BT /F1 10 Tf 75 674 Td (   o  Enumerated Status Codes
+) Tj ET
+BT /F1 10 Tf 75 662 Td (      Each of the entries in this table represent the combination of a
+) Tj ET
+BT /F1 10 Tf 75 650 Td (      subject sub-code and a detail sub-code.  All entries will have an
+) Tj ET
+BT /F1 10 Tf 75 638 Td (      unspecified class sub-code, a specified subject sub-code, and a
+) Tj ET
+BT /F1 10 Tf 75 626 Td (      specified detail sub-code.
+) Tj ET
+BT /F1 10 Tf 75 614 Td (
+) Tj ET
+BT /F1 10 Tf 75 602 Td (   Each entry in the tables will include the following.  \\(The sub-code
+) Tj ET
+BT /F1 10 Tf 75 590 Td (   tables will not have the Associated Basic Status Code entries.\\)
+) Tj ET
+BT /F1 10 Tf 75 578 Td (
+) Tj ET
+BT /F1 10 Tf 75 566 Td (   Code:                         The status code.  For example,
+) Tj ET
+BT /F1 10 Tf 75 554 Td (                                 3.XXX.YYY is a class sub-code with an
+) Tj ET
+BT /F1 10 Tf 75 542 Td (                                 unspecified subject sub-code and an
+) Tj ET
+BT /F1 10 Tf 75 530 Td (                                 unspecified detail sub-code, and X.5.0
+) Tj ET
+BT /F1 10 Tf 75 518 Td (                                 is an enumerated status code with an
+) Tj ET
+BT /F1 10 Tf 75 506 Td (                                 unspecified class sub-code.
+) Tj ET
+BT /F1 10 Tf 75 494 Td (
+) Tj ET
+BT /F1 10 Tf 75 482 Td (   Summary: or Sample Text:      For class and subject sub-codes, this
+) Tj ET
+BT /F1 10 Tf 75 470 Td (                                 is the summary of the use for the sub-
+) Tj ET
+BT /F1 10 Tf 75 458 Td (                                 code shown in section 2 of [RFC3463].
+) Tj ET
+BT /F1 10 Tf 75 446 Td (                                 For enumerated status codes, this is an
+) Tj ET
+BT /F1 10 Tf 75 434 Td (                                 example of a message that might be sent
+) Tj ET
+BT /F1 10 Tf 75 422 Td (                                 along with the code.
+) Tj ET
+BT /F1 10 Tf 75 410 Td (
+) Tj ET
+BT /F1 10 Tf 75 398 Td (   Associated Basic Status Code: For enumerated status codes, the basic
+) Tj ET
+BT /F1 10 Tf 75 386 Td (                                 status code\\(s\\) of [RFC2821] with which
+) Tj ET
+BT /F1 10 Tf 75 374 Td (                                 it is usually associated.  This may
+) Tj ET
+BT /F1 10 Tf 75 362 Td (                                 also have a value such as "Any" or "Not
+) Tj ET
+BT /F1 10 Tf 75 350 Td (                                 given".  NOTE: This is a non-exclusive
+) Tj ET
+BT /F1 10 Tf 75 338 Td (                                 list.  In particular, the entries that
+) Tj ET
+BT /F1 10 Tf 75 326 Td (                                 list some basic status codes for an
+) Tj ET
+BT /F1 10 Tf 75 314 Td (                                 Enhanced Status Code might allow for
+) Tj ET
+BT /F1 10 Tf 75 302 Td (                                 other basic status codes, while the
+) Tj ET
+BT /F1 10 Tf 75 290 Td (                                 entries denoted "Not given" can be
+) Tj ET
+BT /F1 10 Tf 75 278 Td (                                 filled in by updating the IANA registry
+) Tj ET
+BT /F1 10 Tf 75 266 Td (                                 through updates to this document or at
+) Tj ET
+BT /F1 10 Tf 75 254 Td (                                 the direction of the IESG.
+) Tj ET
+BT /F1 10 Tf 75 242 Td (
+) Tj ET
+BT /F1 10 Tf 75 230 Td (   Description:                  A short description of the code.
+) Tj ET
+BT /F1 10 Tf 75 218 Td (
+) Tj ET
+BT /F1 10 Tf 75 206 Td (   Reference:                    A reference to the document in which
+) Tj ET
+BT /F1 10 Tf 75 194 Td (                                 the code is defined.  This reference
+) Tj ET
+BT /F1 10 Tf 75 182 Td (                                 should note whether the relevant
+) Tj ET
+BT /F1 10 Tf 75 170 Td (                                 specification is standards-track, best
+) Tj ET
+BT /F1 10 Tf 75 158 Td (                                 current practice, or neither, using one
+) Tj ET
+BT /F1 10 Tf 75 146 Td (                                 of "\\(Standards track\\)", "\\(Best current
+) Tj ET
+BT /F1 10 Tf 75 134 Td (                                 practice\\)" or "\\(Not standards track\\)".
+) Tj ET
+BT /F1 10 Tf 75 122 Td (
+) Tj ET
+BT /F1 10 Tf 75 110 Td (
+) Tj ET
+BT /F1 10 Tf 75 98 Td (
+) Tj ET
+BT /F1 10 Tf 75 86 Td (
+) Tj ET
+BT /F1 10 Tf 75 74 Td (
+) Tj ET
+BT /F1 10 Tf 75 62 Td (Hansen & Klensin         Best Current Practice                  [Page 3]
+) Tj ET
+endstream
+endobj
+
+10 0 obj
+4642
+endobj
+
+12 0 obj
+<<
+/Length 13 0 R
+>>
+stream
+BT /F1 10 Tf 75 710 Td (RFC 5248           SMTP Enhanced Status Code Registry          June 2008
+) Tj ET
+BT /F1 10 Tf 75 698 Td (
+) Tj ET
+BT /F1 10 Tf 75 686 Td (
+) Tj ET
+BT /F1 10 Tf 75 674 Td (   Submitter:                    The identity of the submitter, usually
+) Tj ET
+BT /F1 10 Tf 75 662 Td (                                 the document author.
+) Tj ET
+BT /F1 10 Tf 75 650 Td (
+) Tj ET
+BT /F1 10 Tf 75 638 Td (   Change Controller:            The identity of the change controller
+) Tj ET
+BT /F1 10 Tf 75 626 Td (                                 for the specification.  This will be
+) Tj ET
+BT /F1 10 Tf 75 614 Td (                                 "IESG" in the case of IETF-produced
+) Tj ET
+BT /F1 10 Tf 75 602 Td (                                 documents.
+) Tj ET
+BT /F1 10 Tf 75 590 Td (
+) Tj ET
+BT /F1 10 Tf 75 578 Td (   An example of an entry in the enumerated status code table would be:
+) Tj ET
+BT /F1 10 Tf 75 566 Td (
+) Tj ET
+BT /F1 10 Tf 75 554 Td (   Code:               X.0.0
+) Tj ET
+BT /F1 10 Tf 75 542 Td (   Sample Text:        Other undefined Status
+) Tj ET
+BT /F1 10 Tf 75 530 Td (   Associated basic status code:  Any
+) Tj ET
+BT /F1 10 Tf 75 518 Td (   Description:        Other undefined status is the only undefined
+) Tj ET
+BT /F1 10 Tf 75 506 Td (                       error code.  It should be used for all errors for
+) Tj ET
+BT /F1 10 Tf 75 494 Td (                       which only the class of the error is known.
+) Tj ET
+BT /F1 10 Tf 75 482 Td (   Reference:          RFC 3463 \\(Standards track\\)
+) Tj ET
+BT /F1 10 Tf 75 470 Td (   Submitter:          G. Vaudreuil
+) Tj ET
+BT /F1 10 Tf 75 458 Td (   Change controller:  IESG.
+) Tj ET
+BT /F1 10 Tf 75 446 Td (
+) Tj ET
+BT /F1 10 Tf 75 434 Td (2.2.  Review Process for New Values
+) Tj ET
+BT /F1 10 Tf 75 422 Td (
+) Tj ET
+BT /F1 10 Tf 75 410 Td (   Entries in this registry are expected to follow the "Specification
+) Tj ET
+BT /F1 10 Tf 75 398 Td (   Required" model \\([RFC5226]\\) although, in practice, most entries are
+) Tj ET
+BT /F1 10 Tf 75 386 Td (   expected to derive from standards-track documents.  Non-standards-
+) Tj ET
+BT /F1 10 Tf 75 374 Td (   track documents that specify codes to be registered should be readily
+) Tj ET
+BT /F1 10 Tf 75 362 Td (   available.  The principal purpose of this registry is to avoid
+) Tj ET
+BT /F1 10 Tf 75 350 Td (   confusion and conflicts among different definitions or uses for the
+) Tj ET
+BT /F1 10 Tf 75 338 Td (   same code.
+) Tj ET
+BT /F1 10 Tf 75 326 Td (
+) Tj ET
+BT /F1 10 Tf 75 314 Td (2.3.  Registration Updates
+) Tj ET
+BT /F1 10 Tf 75 302 Td (
+) Tj ET
+BT /F1 10 Tf 75 290 Td (   Standards-track registrations may be updated if the relevant
+) Tj ET
+BT /F1 10 Tf 75 278 Td (   standards are updated as a consequence of that action.  Non-
+) Tj ET
+BT /F1 10 Tf 75 266 Td (   standards-track entries may be updated by the listed change
+) Tj ET
+BT /F1 10 Tf 75 254 Td (   controller.  Only the entry's short description or references may be
+) Tj ET
+BT /F1 10 Tf 75 242 Td (   modified in this way, not the code or associated text.  In
+) Tj ET
+BT /F1 10 Tf 75 230 Td (   exceptional cases, any aspect of any registered entity may be updated
+) Tj ET
+BT /F1 10 Tf 75 218 Td (   at the direction of the IESG \\(for example, to correct a conflict\\).
+) Tj ET
+BT /F1 10 Tf 75 206 Td (
+) Tj ET
+BT /F1 10 Tf 75 194 Td (
+) Tj ET
+BT /F1 10 Tf 75 182 Td (
+) Tj ET
+BT /F1 10 Tf 75 170 Td (
+) Tj ET
+BT /F1 10 Tf 75 158 Td (
+) Tj ET
+BT /F1 10 Tf 75 146 Td (
+) Tj ET
+BT /F1 10 Tf 75 134 Td (
+) Tj ET
+BT /F1 10 Tf 75 122 Td (
+) Tj ET
+BT /F1 10 Tf 75 110 Td (
+) Tj ET
+BT /F1 10 Tf 75 98 Td (
+) Tj ET
+BT /F1 10 Tf 75 86 Td (
+) Tj ET
+BT /F1 10 Tf 75 74 Td (
+) Tj ET
+BT /F1 10 Tf 75 62 Td (Hansen & Klensin         Best Current Practice                  [Page 4]
+) Tj ET
+endstream
+endobj
+
+13 0 obj
+3789
+endobj
+
+15 0 obj
+<<
+/Length 16 0 R
+>>
+stream
+BT /F1 10 Tf 75 710 Td (RFC 5248           SMTP Enhanced Status Code Registry          June 2008
+) Tj ET
+BT /F1 10 Tf 75 698 Td (
+) Tj ET
+BT /F1 10 Tf 75 686 Td (
+) Tj ET
+BT /F1 10 Tf 75 674 Td (2.4.  Initial Values
+) Tj ET
+BT /F1 10 Tf 75 662 Td (
+) Tj ET
+BT /F1 10 Tf 75 650 Td (   The initial values for the class and subject sub-code tables are to
+) Tj ET
+BT /F1 10 Tf 75 638 Td (   be populated from section 2 of [RFC3463].  Specifically, these are
+) Tj ET
+BT /F1 10 Tf 75 626 Td (   the values for 2.XXX.YYY, 4.XXX.YYY, and 5.XXX.YYY for the Class Sub-
+) Tj ET
+BT /F1 10 Tf 75 614 Td (   Code table, and the values X.0.YYY, X.1.YYY, X.2.YYY, X.3.YYY,
+) Tj ET
+BT /F1 10 Tf 75 602 Td (   X.4.YYY, X.5.YYY, X.6.YYY, and X.7.YYY for the Subject Sub-Code
+) Tj ET
+BT /F1 10 Tf 75 590 Td (   table.  The code, sample text, and description for each entry are to
+) Tj ET
+BT /F1 10 Tf 75 578 Td (   be taken from [RFC3463].  Each entry is to use [RFC3463] as the
+) Tj ET
+BT /F1 10 Tf 75 566 Td (   reference, submitted by G. Vaudreuil, and change controlled by the
+) Tj ET
+BT /F1 10 Tf 75 554 Td (   IESG.  There are no associated detail sub-code values for the class
+) Tj ET
+BT /F1 10 Tf 75 542 Td (   and subject sub-code tables.
+) Tj ET
+BT /F1 10 Tf 75 530 Td (
+) Tj ET
+BT /F1 10 Tf 75 518 Td (   The initial values for the Enumerated Status Code table is to be
+) Tj ET
+BT /F1 10 Tf 75 506 Td (   populated from:
+) Tj ET
+BT /F1 10 Tf 75 494 Td (
+) Tj ET
+BT /F1 10 Tf 75 482 Td (   1.  sections 3.1 through 3.8 of [RFC3463], \\(X.0.0, X.1.0 through
+) Tj ET
+BT /F1 10 Tf 75 470 Td (       X.1.8, X.2.0 through X.2.4, X.3.0 through X.3.5, X.4.0 through
+) Tj ET
+BT /F1 10 Tf 75 458 Td (       X.4.7, X.5.0 through X.5.5, X.6.0 through X.6.5, and X.7.0
+) Tj ET
+BT /F1 10 Tf 75 446 Td (       through X.7.7\\),
+) Tj ET
+BT /F1 10 Tf 75 434 Td (
+) Tj ET
+BT /F1 10 Tf 75 422 Td (   2.  section 3.3.4 of [RFC3886] \\(X.1.9\\),
+) Tj ET
+BT /F1 10 Tf 75 410 Td (
+) Tj ET
+BT /F1 10 Tf 75 398 Td (   3.  X.6.6 found in section 5 of [RFC4468], \\(but not X.7.8 found in
+) Tj ET
+BT /F1 10 Tf 75 386 Td (       the same section\\),
+) Tj ET
+BT /F1 10 Tf 75 374 Td (
+) Tj ET
+BT /F1 10 Tf 75 362 Td (   4.  and X.5.6, X.7.8, X.7.9, X.7.11, and X.7.12, found in section 6
+) Tj ET
+BT /F1 10 Tf 75 350 Td (       of [RFC4954] \\(using the text from X.5.6, 5.7.8, 5.7.9, 5.7.11,
+) Tj ET
+BT /F1 10 Tf 75 338 Td (       and 4.7.12\\).
+) Tj ET
+BT /F1 10 Tf 75 326 Td (
+) Tj ET
+BT /F1 10 Tf 75 314 Td (   Each entry is to be designated as defined in the corresponding RFC,
+) Tj ET
+BT /F1 10 Tf 75 302 Td (   submitted by the corresponding RFC author, and change controlled by
+) Tj ET
+BT /F1 10 Tf 75 290 Td (   the IESG.  Each of the above RFCs is a standards-track document.
+) Tj ET
+BT /F1 10 Tf 75 278 Td (
+) Tj ET
+BT /F1 10 Tf 75 266 Td (   The initial values for the Associated Basic Status Code for each of
+) Tj ET
+BT /F1 10 Tf 75 254 Td (   the above initial enhanced status codes is given in the following
+) Tj ET
+BT /F1 10 Tf 75 242 Td (   table.
+) Tj ET
+BT /F1 10 Tf 75 230 Td (
+) Tj ET
+BT /F1 10 Tf 75 218 Td (   As noted above, this table is incomplete.  In particular, the entries
+) Tj ET
+BT /F1 10 Tf 75 206 Td (   that have some basic status codes might allow for other detail sub-
+) Tj ET
+BT /F1 10 Tf 75 194 Td (   status codes, while the entries denoted "Not given" can be filled in
+) Tj ET
+BT /F1 10 Tf 75 182 Td (   by updating the IANA registry through updates to this document or at
+) Tj ET
+BT /F1 10 Tf 75 170 Td (   the direction of the IESG.
+) Tj ET
+BT /F1 10 Tf 75 158 Td (
+) Tj ET
+BT /F1 10 Tf 75 146 Td (
+) Tj ET
+BT /F1 10 Tf 75 134 Td (
+) Tj ET
+BT /F1 10 Tf 75 122 Td (
+) Tj ET
+BT /F1 10 Tf 75 110 Td (
+) Tj ET
+BT /F1 10 Tf 75 98 Td (
+) Tj ET
+BT /F1 10 Tf 75 86 Td (
+) Tj ET
+BT /F1 10 Tf 75 74 Td (
+) Tj ET
+BT /F1 10 Tf 75 62 Td (Hansen & Klensin         Best Current Practice                  [Page 5]
+) Tj ET
+endstream
+endobj
+
+16 0 obj
+3909
+endobj
+
+18 0 obj
+<<
+/Length 19 0 R
+>>
+stream
+BT /F1 10 Tf 75 710 Td (RFC 5248           SMTP Enhanced Status Code Registry          June 2008
+) Tj ET
+BT /F1 10 Tf 75 698 Td (
+) Tj ET
+BT /F1 10 Tf 75 686 Td (
+) Tj ET
+BT /F1 10 Tf 75 674 Td (   +--------+---------------+--------+----------+--------+-------------+
+) Tj ET
+BT /F1 10 Tf 75 662 Td (   | Enh.   | Assoc.  Basic | Enh.   | Assoc.   | Enh.   | Assoc.      |
+) Tj ET
+BT /F1 10 Tf 75 650 Td (   | Status | Status Code   | Status | Basic    | Status | Basic       |
+) Tj ET
+BT /F1 10 Tf 75 638 Td (   | Code   |               | Code   | Status   | Code   | Status Code |
+) Tj ET
+BT /F1 10 Tf 75 626 Td (   |        |               |        | Code     |        |             |
+) Tj ET
+BT /F1 10 Tf 75 614 Td (   +--------+---------------+--------+----------+--------+-------------+
+) Tj ET
+BT /F1 10 Tf 75 602 Td (   | X.0.0  | Any           | X.1.0  | Not      | X.1.1  | 451, 550    |
+) Tj ET
+BT /F1 10 Tf 75 590 Td (   |        |               |        | given    |        |             |
+) Tj ET
+BT /F1 10 Tf 75 578 Td (   | X.1.2  | Not given     | X.1.3  | 501      | X.1.4  | Not given   |
+) Tj ET
+BT /F1 10 Tf 75 566 Td (   | X.1.5  | 250           | X.1.6  | Not      | X.1.7  | Not given   |
+) Tj ET
+BT /F1 10 Tf 75 554 Td (   |        |               |        | given    |        |             |
+) Tj ET
+BT /F1 10 Tf 75 542 Td (   | X.1.8  | 451, 501      | X.1.9  | Not      | X.2.0  | Not given   |
+) Tj ET
+BT /F1 10 Tf 75 530 Td (   |        |               |        | given    |        |             |
+) Tj ET
+BT /F1 10 Tf 75 518 Td (   | X.2.1  | Not given     | X.2.2  | 552      | X.2.3  | 552         |
+) Tj ET
+BT /F1 10 Tf 75 506 Td (   | X.2.4  | 450, 452      | X.3.0  | 221,     | X.3.1  | 452         |
+) Tj ET
+BT /F1 10 Tf 75 494 Td (   |        |               |        | 250,     |        |             |
+) Tj ET
+BT /F1 10 Tf 75 482 Td (   |        |               |        | 421,     |        |             |
+) Tj ET
+BT /F1 10 Tf 75 470 Td (   |        |               |        | 451,     |        |             |
+) Tj ET
+BT /F1 10 Tf 75 458 Td (   |        |               |        | 550, 554 |        |             |
+) Tj ET
+BT /F1 10 Tf 75 446 Td (   | X.3.2  | 453           | X.3.3  | Not      | X.3.4  | 552, 554    |
+) Tj ET
+BT /F1 10 Tf 75 434 Td (   |        |               |        | given    |        |             |
+) Tj ET
+BT /F1 10 Tf 75 422 Td (   | X.3.5  | Not given     | X.4.0  | Not      | X.4.1  | 451         |
+) Tj ET
+BT /F1 10 Tf 75 410 Td (   |        |               |        | given    |        |             |
+) Tj ET
+BT /F1 10 Tf 75 398 Td (   | X.4.2  | 421           | X.4.3  | 451, 550 | X.4.4  | Not given   |
+) Tj ET
+BT /F1 10 Tf 75 386 Td (   | X.4.5  | 451           | X.4.6  | Not      | X.4.7  | Not given   |
+) Tj ET
+BT /F1 10 Tf 75 374 Td (   |        |               |        | given    |        |             |
+) Tj ET
+BT /F1 10 Tf 75 362 Td (   | X.5.0  | 220, 250,     | X.5.1  | 430,     | X.5.2  | 500, 501,   |
+) Tj ET
+BT /F1 10 Tf 75 350 Td (   |        | 251, 252,     |        | 500,     |        | 502, 550,   |
+) Tj ET
+BT /F1 10 Tf 75 338 Td (   |        | 253, 451,     |        | 501,     |        | 555         |
+) Tj ET
+BT /F1 10 Tf 75 326 Td (   |        | 452, 454,     |        | 503,     |        |             |
+) Tj ET
+BT /F1 10 Tf 75 314 Td (   |        | 458, 459,     |        | 530,     |        |             |
+) Tj ET
+BT /F1 10 Tf 75 302 Td (   |        | 501, 502,     |        | 550,     |        |             |
+) Tj ET
+BT /F1 10 Tf 75 290 Td (   |        | 503, 554      |        | 554, 555 |        |             |
+) Tj ET
+BT /F1 10 Tf 75 278 Td (   | X.5.3  | 451           | X.5.4  | 451,     | X.5.5  | Not given   |
+) Tj ET
+BT /F1 10 Tf 75 266 Td (   |        |               |        | 501,     |        |             |
+) Tj ET
+BT /F1 10 Tf 75 254 Td (   |        |               |        | 502,     |        |             |
+) Tj ET
+BT /F1 10 Tf 75 242 Td (   |        |               |        | 503,     |        |             |
+) Tj ET
+BT /F1 10 Tf 75 230 Td (   |        |               |        | 504,     |        |             |
+) Tj ET
+BT /F1 10 Tf 75 218 Td (   |        |               |        | 550, 555 |        |             |
+) Tj ET
+BT /F1 10 Tf 75 206 Td (   | X.5.6  | 500           | X.6.0  | Not      | X.6.1  | Not given   |
+) Tj ET
+BT /F1 10 Tf 75 194 Td (   |        |               |        | given    |        |             |
+) Tj ET
+BT /F1 10 Tf 75 182 Td (   | X.6.2  | Not given     | X.6.3  | 554      | X.6.4  | 250         |
+) Tj ET
+BT /F1 10 Tf 75 170 Td (   | X.6.5  | Not given     | X.6.6  | 554      | X.7.0  | 220, 235,   |
+) Tj ET
+BT /F1 10 Tf 75 158 Td (   |        |               |        |          |        | 450, 454,   |
+) Tj ET
+BT /F1 10 Tf 75 146 Td (   |        |               |        |          |        | 500, 501,   |
+) Tj ET
+BT /F1 10 Tf 75 134 Td (   |        |               |        |          |        | 503, 504,   |
+) Tj ET
+BT /F1 10 Tf 75 122 Td (   |        |               |        |          |        | 530, 535,   |
+) Tj ET
+BT /F1 10 Tf 75 110 Td (   |        |               |        |          |        | 550         |
+) Tj ET
+BT /F1 10 Tf 75 98 Td (
+) Tj ET
+BT /F1 10 Tf 75 86 Td (
+) Tj ET
+BT /F1 10 Tf 75 74 Td (
+) Tj ET
+BT /F1 10 Tf 75 62 Td (Hansen & Klensin         Best Current Practice                  [Page 6]
+) Tj ET
+endstream
+endobj
+
+19 0 obj
+5411
+endobj
+
+21 0 obj
+<<
+/Length 22 0 R
+>>
+stream
+BT /F1 10 Tf 75 710 Td (RFC 5248           SMTP Enhanced Status Code Registry          June 2008
+) Tj ET
+BT /F1 10 Tf 75 698 Td (
+) Tj ET
+BT /F1 10 Tf 75 686 Td (
+) Tj ET
+BT /F1 10 Tf 75 674 Td (   | X.7.1  | 451, 454,     | X.7.2  | 550      | X.7.3  | Not given   |
+) Tj ET
+BT /F1 10 Tf 75 662 Td (   |        | 502, 503,     |        |          |        |             |
+) Tj ET
+BT /F1 10 Tf 75 650 Td (   |        | 533, 550, 551 |        |          |        |             |
+) Tj ET
+BT /F1 10 Tf 75 638 Td (   | X.7.4  | 504           | X.7.5  | Not      | X.7.6  | Not given   |
+) Tj ET
+BT /F1 10 Tf 75 626 Td (   |        |               |        | given    |        |             |
+) Tj ET
+BT /F1 10 Tf 75 614 Td (   | X.7.7  | Not given     | X.7.8  | 535, 554 | X.7.9  | 534         |
+) Tj ET
+BT /F1 10 Tf 75 602 Td (   | X.7.10 | 523           | X.7.11 | 524, 538 | X.7.12 | 422, 432    |
+) Tj ET
+BT /F1 10 Tf 75 590 Td (   | X.7.13 | 525           | X.7.14 | 535, 554 |        |             |
+) Tj ET
+BT /F1 10 Tf 75 578 Td (   +--------+---------------+--------+----------+--------+-------------+
+) Tj ET
+BT /F1 10 Tf 75 566 Td (
+) Tj ET
+BT /F1 10 Tf 75 554 Td (                                  Table 1
+) Tj ET
+BT /F1 10 Tf 75 542 Td (
+) Tj ET
+BT /F1 10 Tf 75 530 Td (   The following additional definitions have been registered in the
+) Tj ET
+BT /F1 10 Tf 75 518 Td (   enumerated status code table.  These entries have been used in the
+) Tj ET
+BT /F1 10 Tf 75 506 Td (   industry without any published specification.
+) Tj ET
+BT /F1 10 Tf 75 494 Td (
+) Tj ET
+BT /F1 10 Tf 75 482 Td (   Code:               X.7.10
+) Tj ET
+BT /F1 10 Tf 75 470 Td (   Sample Text:        Encryption Needed
+) Tj ET
+BT /F1 10 Tf 75 458 Td (   Associated basic status code:  523
+) Tj ET
+BT /F1 10 Tf 75 446 Td (   Description:        This indicates that an external strong privacy
+) Tj ET
+BT /F1 10 Tf 75 434 Td (                       layer is needed in order to use the requested
+) Tj ET
+BT /F1 10 Tf 75 422 Td (                       authentication mechanism.  This is primarily
+) Tj ET
+BT /F1 10 Tf 75 410 Td (                       intended for use with clear text authentication
+) Tj ET
+BT /F1 10 Tf 75 398 Td (                       mechanisms.  A client that receives this may
+) Tj ET
+BT /F1 10 Tf 75 386 Td (                       activate a security layer such as TLS prior to
+) Tj ET
+BT /F1 10 Tf 75 374 Td (                       authenticating, or attempt to use a stronger
+) Tj ET
+BT /F1 10 Tf 75 362 Td (                       mechanism.
+) Tj ET
+BT /F1 10 Tf 75 350 Td (   Reference:          RFC 5248 \\(Best current practice\\)
+) Tj ET
+BT /F1 10 Tf 75 338 Td (   Submitter:          T. Hansen, J. Klensin
+) Tj ET
+BT /F1 10 Tf 75 326 Td (   Change controller:  IESG
+) Tj ET
+BT /F1 10 Tf 75 314 Td (
+) Tj ET
+BT /F1 10 Tf 75 302 Td (
+) Tj ET
+BT /F1 10 Tf 75 290 Td (
+) Tj ET
+BT /F1 10 Tf 75 278 Td (
+) Tj ET
+BT /F1 10 Tf 75 266 Td (
+) Tj ET
+BT /F1 10 Tf 75 254 Td (
+) Tj ET
+BT /F1 10 Tf 75 242 Td (
+) Tj ET
+BT /F1 10 Tf 75 230 Td (
+) Tj ET
+BT /F1 10 Tf 75 218 Td (
+) Tj ET
+BT /F1 10 Tf 75 206 Td (
+) Tj ET
+BT /F1 10 Tf 75 194 Td (
+) Tj ET
+BT /F1 10 Tf 75 182 Td (
+) Tj ET
+BT /F1 10 Tf 75 170 Td (
+) Tj ET
+BT /F1 10 Tf 75 158 Td (
+) Tj ET
+BT /F1 10 Tf 75 146 Td (
+) Tj ET
+BT /F1 10 Tf 75 134 Td (
+) Tj ET
+BT /F1 10 Tf 75 122 Td (
+) Tj ET
+BT /F1 10 Tf 75 110 Td (
+) Tj ET
+BT /F1 10 Tf 75 98 Td (
+) Tj ET
+BT /F1 10 Tf 75 86 Td (
+) Tj ET
+BT /F1 10 Tf 75 74 Td (
+) Tj ET
+BT /F1 10 Tf 75 62 Td (Hansen & Klensin         Best Current Practice                  [Page 7]
+) Tj ET
+endstream
+endobj
+
+22 0 obj
+3574
+endobj
+
+24 0 obj
+<<
+/Length 25 0 R
+>>
+stream
+BT /F1 10 Tf 75 710 Td (RFC 5248           SMTP Enhanced Status Code Registry          June 2008
+) Tj ET
+BT /F1 10 Tf 75 698 Td (
+) Tj ET
+BT /F1 10 Tf 75 686 Td (
+) Tj ET
+BT /F1 10 Tf 75 674 Td (   Code:               X.7.13
+) Tj ET
+BT /F1 10 Tf 75 662 Td (   Sample Text:        User Account Disabled
+) Tj ET
+BT /F1 10 Tf 75 650 Td (   Associated basic status code:  525
+) Tj ET
+BT /F1 10 Tf 75 638 Td (   Description:        Sometimes a system administrator will have to
+) Tj ET
+BT /F1 10 Tf 75 626 Td (                       disable a user's account \\(e.g., due to lack of
+) Tj ET
+BT /F1 10 Tf 75 614 Td (                       payment, abuse, evidence of a break-in attempt,
+) Tj ET
+BT /F1 10 Tf 75 602 Td (                       etc.\\).  This error code occurs after a successful
+) Tj ET
+BT /F1 10 Tf 75 590 Td (                       authentication to a disabled account.  This
+) Tj ET
+BT /F1 10 Tf 75 578 Td (                       informs the client that the failure is permanent
+) Tj ET
+BT /F1 10 Tf 75 566 Td (                       until the user contacts their system
+) Tj ET
+BT /F1 10 Tf 75 554 Td (                       administrator to get the account re-enabled.  It
+) Tj ET
+BT /F1 10 Tf 75 542 Td (                       differs from a generic authentication failure
+) Tj ET
+BT /F1 10 Tf 75 530 Td (                       where the client's best option is to present the
+) Tj ET
+BT /F1 10 Tf 75 518 Td (                       passphrase entry dialog in case the user simply
+) Tj ET
+BT /F1 10 Tf 75 506 Td (                       mistyped their passphrase.
+) Tj ET
+BT /F1 10 Tf 75 494 Td (   Reference:          RFC 5248 \\(Best current practice\\)
+) Tj ET
+BT /F1 10 Tf 75 482 Td (   Submitter:          T. Hansen, J. Klensin
+) Tj ET
+BT /F1 10 Tf 75 470 Td (   Change controller:  IESG
+) Tj ET
+BT /F1 10 Tf 75 458 Td (
+) Tj ET
+BT /F1 10 Tf 75 446 Td (   Code:               X.7.14
+) Tj ET
+BT /F1 10 Tf 75 434 Td (   Sample Text:        Trust relationship required
+) Tj ET
+BT /F1 10 Tf 75 422 Td (   Associated basic status code:  535, 554
+) Tj ET
+BT /F1 10 Tf 75 410 Td (   Description:        The submission server requires a configured trust
+) Tj ET
+BT /F1 10 Tf 75 398 Td (                       relationship with a third-party server in order
+) Tj ET
+BT /F1 10 Tf 75 386 Td (                       to access the message content.  This value
+) Tj ET
+BT /F1 10 Tf 75 374 Td (                       replaces the prior use of X.7.8 for this error
+) Tj ET
+BT /F1 10 Tf 75 362 Td (                       condition, thereby updating [RFC4468].
+) Tj ET
+BT /F1 10 Tf 75 350 Td (   Reference:          RFC 5248 \\(Best current practice\\)
+) Tj ET
+BT /F1 10 Tf 75 338 Td (   Submitter:          T. Hansen, J. Klensin
+) Tj ET
+BT /F1 10 Tf 75 326 Td (   Change controller:  IESG
+) Tj ET
+BT /F1 10 Tf 75 314 Td (
+) Tj ET
+BT /F1 10 Tf 75 302 Td (3.  Security Considerations
+) Tj ET
+BT /F1 10 Tf 75 290 Td (
+) Tj ET
+BT /F1 10 Tf 75 278 Td (   As stated in [RFC1893], use of enhanced status codes may disclose
+) Tj ET
+BT /F1 10 Tf 75 266 Td (   additional information about how an internal mail system is
+) Tj ET
+BT /F1 10 Tf 75 254 Td (   implemented beyond that available through the SMTP status codes.
+) Tj ET
+BT /F1 10 Tf 75 242 Td (
+) Tj ET
+BT /F1 10 Tf 75 230 Td (   Many proposed additions to the response code list are security
+) Tj ET
+BT /F1 10 Tf 75 218 Td (   related.  Having these registered in one place to prevent collisions
+) Tj ET
+BT /F1 10 Tf 75 206 Td (   will improve their value.  Security error responses can leak
+) Tj ET
+BT /F1 10 Tf 75 194 Td (   information to active attackers \\(e.g., the distinction between "user
+) Tj ET
+BT /F1 10 Tf 75 182 Td (   not found" and "bad password" during authentication\\).  Documents
+) Tj ET
+BT /F1 10 Tf 75 170 Td (   defining security error codes should make it clear when this is the
+) Tj ET
+BT /F1 10 Tf 75 158 Td (   case so SMTP server software subject to such threats can provide
+) Tj ET
+BT /F1 10 Tf 75 146 Td (   appropriate controls to restrict exposure.
+) Tj ET
+BT /F1 10 Tf 75 134 Td (
+) Tj ET
+BT /F1 10 Tf 75 122 Td (
+) Tj ET
+BT /F1 10 Tf 75 110 Td (
+) Tj ET
+BT /F1 10 Tf 75 98 Td (
+) Tj ET
+BT /F1 10 Tf 75 86 Td (
+) Tj ET
+BT /F1 10 Tf 75 74 Td (
+) Tj ET
+BT /F1 10 Tf 75 62 Td (Hansen & Klensin         Best Current Practice                  [Page 8]
+) Tj ET
+endstream
+endobj
+
+25 0 obj
+4338
+endobj
+
+27 0 obj
+<<
+/Length 28 0 R
+>>
+stream
+BT /F1 10 Tf 75 710 Td (RFC 5248           SMTP Enhanced Status Code Registry          June 2008
+) Tj ET
+BT /F1 10 Tf 75 698 Td (
+) Tj ET
+BT /F1 10 Tf 75 686 Td (
+) Tj ET
+BT /F1 10 Tf 75 674 Td (4.  Acknowledgements
+) Tj ET
+BT /F1 10 Tf 75 662 Td (
+) Tj ET
+BT /F1 10 Tf 75 650 Td (   While the need for this registry should have become clear shortly
+) Tj ET
+BT /F1 10 Tf 75 638 Td (   after [RFC3463] was approved, the growth of the code table through
+) Tj ET
+BT /F1 10 Tf 75 626 Td (   additional documents and work done as part of email
+) Tj ET
+BT /F1 10 Tf 75 614 Td (   internationalization and [RFC2821] updating efforts made the
+) Tj ET
+BT /F1 10 Tf 75 602 Td (   requirement much more clear.  The comments of the participants in
+) Tj ET
+BT /F1 10 Tf 75 590 Td (   those efforts are gratefully acknowledged, particularly the members
+) Tj ET
+BT /F1 10 Tf 75 578 Td (   of the ietf-smtp@imc.org mailing list.  Chris Newman and Randy
+) Tj ET
+BT /F1 10 Tf 75 566 Td (   Gellens provided useful comments and some text for early versions of
+) Tj ET
+BT /F1 10 Tf 75 554 Td (   the document.
+) Tj ET
+BT /F1 10 Tf 75 542 Td (
+) Tj ET
+BT /F1 10 Tf 75 530 Td (5.  References
+) Tj ET
+BT /F1 10 Tf 75 518 Td (
+) Tj ET
+BT /F1 10 Tf 75 506 Td (5.1.  Normative References
+) Tj ET
+BT /F1 10 Tf 75 494 Td (
+) Tj ET
+BT /F1 10 Tf 75 482 Td (   [RFC2821]  Klensin, J., "Simple Mail Transfer Protocol", RFC 2821,
+) Tj ET
+BT /F1 10 Tf 75 470 Td (              April 2001.
+) Tj ET
+BT /F1 10 Tf 75 458 Td (
+) Tj ET
+BT /F1 10 Tf 75 446 Td (   [RFC3463]  Vaudreuil, G., "Enhanced Mail System Status Codes",
+) Tj ET
+BT /F1 10 Tf 75 434 Td (              RFC 3463, January 2003.
+) Tj ET
+BT /F1 10 Tf 75 422 Td (
+) Tj ET
+BT /F1 10 Tf 75 410 Td (   [RFC3886]  Allman, E., "An Extensible Message Format for Message
+) Tj ET
+BT /F1 10 Tf 75 398 Td (              Tracking Responses", RFC 3886, September 2004.
+) Tj ET
+BT /F1 10 Tf 75 386 Td (
+) Tj ET
+BT /F1 10 Tf 75 374 Td (   [RFC4468]  Newman, C., "Message Submission BURL Extension", RFC 4468,
+) Tj ET
+BT /F1 10 Tf 75 362 Td (              May 2006.
+) Tj ET
+BT /F1 10 Tf 75 350 Td (
+) Tj ET
+BT /F1 10 Tf 75 338 Td (   [RFC4954]  Siemborski, R. and A. Melnikov, "SMTP Service Extension
+) Tj ET
+BT /F1 10 Tf 75 326 Td (              for Authentication", RFC 4954, July 2007.
+) Tj ET
+BT /F1 10 Tf 75 314 Td (
+) Tj ET
+BT /F1 10 Tf 75 302 Td (5.2.  Informative References
+) Tj ET
+BT /F1 10 Tf 75 290 Td (
+) Tj ET
+BT /F1 10 Tf 75 278 Td (   [RFC1893]  Vaudreuil, G., "Enhanced Mail System Status Codes",
+) Tj ET
+BT /F1 10 Tf 75 266 Td (              RFC 1893, January 1996.
+) Tj ET
+BT /F1 10 Tf 75 254 Td (
+) Tj ET
+BT /F1 10 Tf 75 242 Td (   [RFC5226]  Narten, T. and H. Alvestrand, "Guidelines for Writing an
+) Tj ET
+BT /F1 10 Tf 75 230 Td (              IANA Considerations Section in RFCs", BCP 26, RFC 5226,
+) Tj ET
+BT /F1 10 Tf 75 218 Td (              May 2008.
+) Tj ET
+BT /F1 10 Tf 75 206 Td (
+) Tj ET
+BT /F1 10 Tf 75 194 Td (
+) Tj ET
+BT /F1 10 Tf 75 182 Td (
+) Tj ET
+BT /F1 10 Tf 75 170 Td (
+) Tj ET
+BT /F1 10 Tf 75 158 Td (
+) Tj ET
+BT /F1 10 Tf 75 146 Td (
+) Tj ET
+BT /F1 10 Tf 75 134 Td (
+) Tj ET
+BT /F1 10 Tf 75 122 Td (
+) Tj ET
+BT /F1 10 Tf 75 110 Td (
+) Tj ET
+BT /F1 10 Tf 75 98 Td (
+) Tj ET
+BT /F1 10 Tf 75 86 Td (
+) Tj ET
+BT /F1 10 Tf 75 74 Td (
+) Tj ET
+BT /F1 10 Tf 75 62 Td (Hansen & Klensin         Best Current Practice                  [Page 9]
+) Tj ET
+endstream
+endobj
+
+28 0 obj
+3393
+endobj
+
+30 0 obj
+<<
+/Length 31 0 R
+>>
+stream
+BT /F1 10 Tf 75 710 Td (RFC 5248           SMTP Enhanced Status Code Registry          June 2008
+) Tj ET
+BT /F1 10 Tf 75 698 Td (
+) Tj ET
+BT /F1 10 Tf 75 686 Td (
+) Tj ET
+BT /F1 10 Tf 75 674 Td (Authors' Addresses
+) Tj ET
+BT /F1 10 Tf 75 662 Td (
+) Tj ET
+BT /F1 10 Tf 75 650 Td (   Tony Hansen
+) Tj ET
+BT /F1 10 Tf 75 638 Td (   AT&T Laboratories
+) Tj ET
+BT /F1 10 Tf 75 626 Td (   200 Laurel Ave.
+) Tj ET
+BT /F1 10 Tf 75 614 Td (   Middletown, NJ  07748
+) Tj ET
+BT /F1 10 Tf 75 602 Td (   USA
+) Tj ET
+BT /F1 10 Tf 75 590 Td (
+) Tj ET
+BT /F1 10 Tf 75 578 Td (   EMail: tony+mailesc@maillennium.att.com
+) Tj ET
+BT /F1 10 Tf 75 566 Td (
+) Tj ET
+BT /F1 10 Tf 75 554 Td (
+) Tj ET
+BT /F1 10 Tf 75 542 Td (   John C Klensin
+) Tj ET
+BT /F1 10 Tf 75 530 Td (   1770 Massachusetts Ave, Ste 322
+) Tj ET
+BT /F1 10 Tf 75 518 Td (   Cambridge, MA  02140
+) Tj ET
+BT /F1 10 Tf 75 506 Td (   USA
+) Tj ET
+BT /F1 10 Tf 75 494 Td (
+) Tj ET
+BT /F1 10 Tf 75 482 Td (   Phone: +1 617 245 1457
+) Tj ET
+BT /F1 10 Tf 75 470 Td (   EMail: john+ietf@jck.com
+) Tj ET
+BT /F1 10 Tf 75 458 Td (
+) Tj ET
+BT /F1 10 Tf 75 446 Td (
+) Tj ET
+BT /F1 10 Tf 75 434 Td (
+) Tj ET
+BT /F1 10 Tf 75 422 Td (
+) Tj ET
+BT /F1 10 Tf 75 410 Td (
+) Tj ET
+BT /F1 10 Tf 75 398 Td (
+) Tj ET
+BT /F1 10 Tf 75 386 Td (
+) Tj ET
+BT /F1 10 Tf 75 374 Td (
+) Tj ET
+BT /F1 10 Tf 75 362 Td (
+) Tj ET
+BT /F1 10 Tf 75 350 Td (
+) Tj ET
+BT /F1 10 Tf 75 338 Td (
+) Tj ET
+BT /F1 10 Tf 75 326 Td (
+) Tj ET
+BT /F1 10 Tf 75 314 Td (
+) Tj ET
+BT /F1 10 Tf 75 302 Td (
+) Tj ET
+BT /F1 10 Tf 75 290 Td (
+) Tj ET
+BT /F1 10 Tf 75 278 Td (
+) Tj ET
+BT /F1 10 Tf 75 266 Td (
+) Tj ET
+BT /F1 10 Tf 75 254 Td (
+) Tj ET
+BT /F1 10 Tf 75 242 Td (
+) Tj ET
+BT /F1 10 Tf 75 230 Td (
+) Tj ET
+BT /F1 10 Tf 75 218 Td (
+) Tj ET
+BT /F1 10 Tf 75 206 Td (
+) Tj ET
+BT /F1 10 Tf 75 194 Td (
+) Tj ET
+BT /F1 10 Tf 75 182 Td (
+) Tj ET
+BT /F1 10 Tf 75 170 Td (
+) Tj ET
+BT /F1 10 Tf 75 158 Td (
+) Tj ET
+BT /F1 10 Tf 75 146 Td (
+) Tj ET
+BT /F1 10 Tf 75 134 Td (
+) Tj ET
+BT /F1 10 Tf 75 122 Td (
+) Tj ET
+BT /F1 10 Tf 75 110 Td (
+) Tj ET
+BT /F1 10 Tf 75 98 Td (
+) Tj ET
+BT /F1 10 Tf 75 86 Td (
+) Tj ET
+BT /F1 10 Tf 75 74 Td (
+) Tj ET
+BT /F1 10 Tf 75 62 Td (Hansen & Klensin         Best Current Practice                 [Page 10]
+) Tj ET
+endstream
+endobj
+
+31 0 obj
+2229
+endobj
+
+33 0 obj
+<<
+/Length 34 0 R
+>>
+stream
+BT /F1 10 Tf 75 710 Td (RFC 5248           SMTP Enhanced Status Code Registry          June 2008
+) Tj ET
+BT /F1 10 Tf 75 698 Td (
+) Tj ET
+BT /F1 10 Tf 75 686 Td (
+) Tj ET
+BT /F1 10 Tf 75 674 Td (Full Copyright Statement
+) Tj ET
+BT /F1 10 Tf 75 662 Td (
+) Tj ET
+BT /F1 10 Tf 75 650 Td (   Copyright \\(C\\) The IETF Trust \\(2008\\).
+) Tj ET
+BT /F1 10 Tf 75 638 Td (
+) Tj ET
+BT /F1 10 Tf 75 626 Td (   This document is subject to the rights, licenses and restrictions
+) Tj ET
+BT /F1 10 Tf 75 614 Td (   contained in BCP 78, and except as set forth therein, the authors
+) Tj ET
+BT /F1 10 Tf 75 602 Td (   retain all their rights.
+) Tj ET
+BT /F1 10 Tf 75 590 Td (
+) Tj ET
+BT /F1 10 Tf 75 578 Td (   This document and the information contained herein are provided on an
+) Tj ET
+BT /F1 10 Tf 75 566 Td (   "AS IS" basis and THE CONTRIBUTOR, THE ORGANIZATION HE/SHE REPRESENTS
+) Tj ET
+BT /F1 10 Tf 75 554 Td (   OR IS SPONSORED BY \\(IF ANY\\), THE INTERNET SOCIETY, THE IETF TRUST AND
+) Tj ET
+BT /F1 10 Tf 75 542 Td (   THE INTERNET ENGINEERING TASK FORCE DISCLAIM ALL WARRANTIES, EXPRESS
+) Tj ET
+BT /F1 10 Tf 75 530 Td (   OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY WARRANTY THAT THE USE OF
+) Tj ET
+BT /F1 10 Tf 75 518 Td (   THE INFORMATION HEREIN WILL NOT INFRINGE ANY RIGHTS OR ANY IMPLIED
+) Tj ET
+BT /F1 10 Tf 75 506 Td (   WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.
+) Tj ET
+BT /F1 10 Tf 75 494 Td (
+) Tj ET
+BT /F1 10 Tf 75 482 Td (Intellectual Property
+) Tj ET
+BT /F1 10 Tf 75 470 Td (
+) Tj ET
+BT /F1 10 Tf 75 458 Td (   The IETF takes no position regarding the validity or scope of any
+) Tj ET
+BT /F1 10 Tf 75 446 Td (   Intellectual Property Rights or other rights that might be claimed to
+) Tj ET
+BT /F1 10 Tf 75 434 Td (   pertain to the implementation or use of the technology described in
+) Tj ET
+BT /F1 10 Tf 75 422 Td (   this document or the extent to which any license under such rights
+) Tj ET
+BT /F1 10 Tf 75 410 Td (   might or might not be available; nor does it represent that it has
+) Tj ET
+BT /F1 10 Tf 75 398 Td (   made any independent effort to identify any such rights.  Information
+) Tj ET
+BT /F1 10 Tf 75 386 Td (   on the procedures with respect to rights in RFC documents can be
+) Tj ET
+BT /F1 10 Tf 75 374 Td (   found in BCP 78 and BCP 79.
+) Tj ET
+BT /F1 10 Tf 75 362 Td (
+) Tj ET
+BT /F1 10 Tf 75 350 Td (   Copies of IPR disclosures made to the IETF Secretariat and any
+) Tj ET
+BT /F1 10 Tf 75 338 Td (   assurances of licenses to be made available, or the result of an
+) Tj ET
+BT /F1 10 Tf 75 326 Td (   attempt made to obtain a general license or permission for the use of
+) Tj ET
+BT /F1 10 Tf 75 314 Td (   such proprietary rights by implementers or users of this
+) Tj ET
+BT /F1 10 Tf 75 302 Td (   specification can be obtained from the IETF on-line IPR repository at
+) Tj ET
+BT /F1 10 Tf 75 290 Td (   http://www.ietf.org/ipr.
+) Tj ET
+BT /F1 10 Tf 75 278 Td (
+) Tj ET
+BT /F1 10 Tf 75 266 Td (   The IETF invites any interested party to bring to its attention any
+) Tj ET
+BT /F1 10 Tf 75 254 Td (   copyrights, patents or patent applications, or other proprietary
+) Tj ET
+BT /F1 10 Tf 75 242 Td (   rights that may cover technology that may be required to implement
+) Tj ET
+BT /F1 10 Tf 75 230 Td (   this standard.  Please address the information to the IETF at
+) Tj ET
+BT /F1 10 Tf 75 218 Td (   ietf-ipr@ietf.org.
+) Tj ET
+BT /F1 10 Tf 75 206 Td (
+) Tj ET
+BT /F1 10 Tf 75 194 Td (
+) Tj ET
+BT /F1 10 Tf 75 182 Td (
+) Tj ET
+BT /F1 10 Tf 75 170 Td (
+) Tj ET
+BT /F1 10 Tf 75 158 Td (
+) Tj ET
+BT /F1 10 Tf 75 146 Td (
+) Tj ET
+BT /F1 10 Tf 75 134 Td (
+) Tj ET
+BT /F1 10 Tf 75 122 Td (
+) Tj ET
+BT /F1 10 Tf 75 110 Td (
+) Tj ET
+BT /F1 10 Tf 75 98 Td (
+) Tj ET
+BT /F1 10 Tf 75 86 Td (
+) Tj ET
+BT /F1 10 Tf 75 74 Td (
+) Tj ET
+BT /F1 10 Tf 75 62 Td (Hansen & Klensin         Best Current Practice                 [Page 11]
+) Tj ET
+endstream
+endobj
+
+34 0 obj
+3881
+endobj
+
+35 0 obj
+<<
+/Last 44 0 R
+/Dest [2 0 R /Fit null null null]
+/Count 5
+/First 36 0 R
+/Title (rfc5248.txt)
+/Parent 47 0 R
+>>
+endobj
+
+36 0 obj
+<<
+/Dest [5 0 R /Fit null null null]
+/Next 37 0 R
+/Title (1. Introduction)
+/Parent 35 0 R
+>>
+endobj
+
+37 0 obj
+<<
+/Next 42 0 R
+/Title (2. IANA Considerations)
+/Parent 35 0 R
+/Dest [5 0 R /Fit null null null]
+/Last 41 0 R
+/Prev 36 0 R
+/Count -4
+/First 38 0 R
+>>
+endobj
+
+38 0 obj
+<<
+/Dest [5 0 R /Fit null null null]
+/Next 39 0 R
+/Title (2.1. SMTP Enhanced Status Codes Registry)
+/Parent 37 0 R
+>>
+endobj
+
+39 0 obj
+<<
+/Dest [11 0 R /Fit null null null]
+/Prev 38 0 R
+/Next 40 0 R
+/Title (2.2. Review Process for New Values)
+/Parent 37 0 R
+>>
+endobj
+
+40 0 obj
+<<
+/Dest [11 0 R /Fit null null null]
+/Prev 39 0 R
+/Next 41 0 R
+/Title (2.3. Registration Updates)
+/Parent 37 0 R
+>>
+endobj
+
+41 0 obj
+<<
+/Dest [14 0 R /Fit null null null]
+/Prev 40 0 R
+/Title (2.4. Initial Values)
+/Parent 37 0 R
+>>
+endobj
+
+42 0 obj
+<<
+/Dest [23 0 R /Fit null null null]
+/Prev 37 0 R
+/Next 43 0 R
+/Title (3. Security Considerations)
+/Parent 35 0 R
+>>
+endobj
+
+43 0 obj
+<<
+/Dest [26 0 R /Fit null null null]
+/Prev 42 0 R
+/Next 44 0 R
+/Title (4. Acknowledgements)
+/Parent 35 0 R
+>>
+endobj
+
+44 0 obj
+<<
+/Last 46 0 R
+/Dest [26 0 R /Fit null null null]
+/Prev 43 0 R
+/Count -2
+/First 45 0 R
+/Title (5. References)
+/Parent 35 0 R
+>>
+endobj
+
+45 0 obj
+<<
+/Dest [26 0 R /Fit null null null]
+/Next 46 0 R
+/Title (5.1. Normative References)
+/Parent 44 0 R
+>>
+endobj
+
+46 0 obj
+<<
+/Dest [26 0 R /Fit null null null]
+/Prev 45 0 R
+/Title (5.2. Informative References)
+/Parent 44 0 R
+>>
+endobj
+
+47 0 obj
+<<
+/Last 46 0 R
+/Type /Outlines
+/Count 6
+/First 35 0 R
+>>
+endobj
+
+48 0 obj
+<<
+/Type /Catalog
+/Outlines 47 0 R
+/Pages 49 0 R
+/PageMode /UseOutlines
+>>
+endobj
+
+49 0 obj
+<<
+/Kids [1 0 R]
+/Type /Pages
+/Count 11
+>>
+endobj
+
+50 0 obj
+<<
+/Type /Font
+/Encoding /WinAnsiEncoding
+/Subtype /Type1
+/BaseFont /Courier
+/Name /F1
+>>
+endobj
+
+1 0 obj
+<<
+/Kids [2 0 R 5 0 R 8 0 R 11 0 R 14 0 R 17 0 R 20 0 R 23 0 R 26 0 R 29 0 R 32 0 R]
+/Type /Pages
+/Count 11
+/MediaBox [0 0 612 792]
+/Parent 49 0 R
+>>
+endobj
+
+2 0 obj
+<<
+/Contents [3 0 R]
+/Type /Page
+/Resources <<
+/Font <<
+/F1 50 0 R
+>>
+/ProcSet [/PDF /Text]
+>>
+/Parent 1 0 R
+>>
+endobj
+
+5 0 obj
+<<
+/Contents [6 0 R]
+/Type /Page
+/Resources <<
+/Font <<
+/F1 50 0 R
+>>
+/ProcSet [/PDF /Text]
+>>
+/Parent 1 0 R
+>>
+endobj
+
+8 0 obj
+<<
+/Contents [9 0 R]
+/Type /Page
+/Resources <<
+/Font <<
+/F1 50 0 R
+>>
+/ProcSet [/PDF /Text]
+>>
+/Parent 1 0 R
+>>
+endobj
+
+11 0 obj
+<<
+/Contents [12 0 R]
+/Type /Page
+/Resources <<
+/Font <<
+/F1 50 0 R
+>>
+/ProcSet [/PDF /Text]
+>>
+/Parent 1 0 R
+>>
+endobj
+
+14 0 obj
+<<
+/Contents [15 0 R]
+/Type /Page
+/Resources <<
+/Font <<
+/F1 50 0 R
+>>
+/ProcSet [/PDF /Text]
+>>
+/Parent 1 0 R
+>>
+endobj
+
+17 0 obj
+<<
+/Contents [18 0 R]
+/Type /Page
+/Resources <<
+/Font <<
+/F1 50 0 R
+>>
+/ProcSet [/PDF /Text]
+>>
+/Parent 1 0 R
+>>
+endobj
+
+20 0 obj
+<<
+/Contents [21 0 R]
+/Type /Page
+/Resources <<
+/Font <<
+/F1 50 0 R
+>>
+/ProcSet [/PDF /Text]
+>>
+/Parent 1 0 R
+>>
+endobj
+
+23 0 obj
+<<
+/Contents [24 0 R]
+/Type /Page
+/Resources <<
+/Font <<
+/F1 50 0 R
+>>
+/ProcSet [/PDF /Text]
+>>
+/Parent 1 0 R
+>>
+endobj
+
+26 0 obj
+<<
+/Contents [27 0 R]
+/Type /Page
+/Resources <<
+/Font <<
+/F1 50 0 R
+>>
+/ProcSet [/PDF /Text]
+>>
+/Parent 1 0 R
+>>
+endobj
+
+29 0 obj
+<<
+/Contents [30 0 R]
+/Type /Page
+/Resources <<
+/Font <<
+/F1 50 0 R
+>>
+/ProcSet [/PDF /Text]
+>>
+/Parent 1 0 R
+>>
+endobj
+
+32 0 obj
+<<
+/Contents [33 0 R]
+/Type /Page
+/Resources <<
+/Font <<
+/F1 50 0 R
+>>
+/ProcSet [/PDF /Text]
+>>
+/Parent 1 0 R
+>>
+endobj
+
+51 0 obj
+<<
+/Type /Info
+/Subject (RFC Document)
+/Producer (PDF::Create version 0.08)
+/Author (peng jianrong)
+/Title (rfc5248.txt)
+/Keywords (rfc5248.txt)
+>>
+endobj
+
+xref
+0 52
+0000000000 65535 f 
+0000046089 00000 n 
+0000046255 00000 n 
+0000000009 00000 n 
+0000004002 00000 n 
+0000046383 00000 n 
+0000004023 00000 n 
+0000008290 00000 n 
+0000046511 00000 n 
+0000008311 00000 n 
+0000013007 00000 n 
+0000046639 00000 n 
+0000013029 00000 n 
+0000016873 00000 n 
+0000046769 00000 n 
+0000016895 00000 n 
+0000020859 00000 n 
+0000046899 00000 n 
+0000020881 00000 n 
+0000026347 00000 n 
+0000047029 00000 n 
+0000026369 00000 n 
+0000029998 00000 n 
+0000047159 00000 n 
+0000030020 00000 n 
+0000034413 00000 n 
+0000047289 00000 n 
+0000034435 00000 n 
+0000037883 00000 n 
+0000047419 00000 n 
+0000037905 00000 n 
+0000040189 00000 n 
+0000047549 00000 n 
+0000040211 00000 n 
+0000044147 00000 n 
+0000044169 00000 n 
+0000044298 00000 n 
+0000044408 00000 n 
+0000044575 00000 n 
+0000044710 00000 n 
+0000044853 00000 n 
+0000044987 00000 n 
+0000045102 00000 n 
+0000045237 00000 n 
+0000045365 00000 n 
+0000045511 00000 n 
+0000045632 00000 n 
+0000045755 00000 n 
+0000045830 00000 n 
+0000045922 00000 n 
+0000045982 00000 n 
+0000047679 00000 n 
+trailer
+<<
+/Size 52
+/Root 48 0 R
+/Info 51 0 R
+>>
+startxref
+47844
+%%EOF
+52 0 obj << /Type /Font /Subtype /Type1 /FirstChar 32 /Encoding << /Type /Encoding /BaseEncoding /WinAnsiEncoding /Differences [ 0 /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /space /exclam /quotedbl /numbersign /dollar /percent /ampersand /quotesingle /parenleft /parenright /asterisk /plus /comma /hyphen /period /slash /zero /one /two /three /four /five /six /seven /eight /nine /colon /semicolon /less /equal /greater /question /at /A /B /C /D /E /F /G /H /I /J /K /L /M /N /O /P /Q /R /S /T /U /V /W /X /Y /Z /bracketleft /backslash /bracketright /asciicircum /underscore /grave /a /b /c /d /e /f /g /h /i /j /k /l /m /n /o /p /q /r /s /t /u /v /w /x /y /z /braceleft /bar /braceright /asciitilde /bullet /Euro /bullet /quotesinglbase /florin /quotedblbase /ellipsis /dagger /daggerdbl /circumflex /perthousand /Scaron /guilsinglleft /OE /bullet /Zcaron /bullet /bullet /quoteleft /quoteright /quotedblleft /quotedblright /bullet /endash /emdash /tilde /trademark /scaron /guilsinglright /oe /bullet /zcaron /Ydieresis /space /exclamdown /cent /sterling /currency /yen /brokenbar /section /dieresis /copyright /ordfeminine /guillemotleft /logicalnot /hyphen /registered /macron /degree /plusminus /twosuperior /threesuperior /acute /mu /paragraph /periodcentered /cedilla /onesuperior /ordmasculine /guillemotright /onequarter /onehalf /threequarters /questiondown /Agrave /Aacute /Acircumflex /Atilde /Adieresis /Aring /AE /Ccedilla /Egrave /Eacute /Ecircumflex /Edieresis /Igrave /Iacute /Icircumflex /Idieresis /Eth /Ntilde /Ograve /Oacute /Ocircumflex /Otilde /Odieresis /multiply /Oslash /Ugrave /Uacute /Ucircumflex /Udieresis /Yacute /Thorn /germandbls /agrave /aacute /acircumflex /atilde /adieresis /aring /ae /ccedilla /egrave /eacute /ecircumflex /edieresis /igrave /iacute /icircumflex /idieresis /eth /ntilde /ograve /oacute /ocircumflex /otilde /odieresis /divide /oslash /ugrave /uacute /ucircumflex /udieresis /yacute /thorn /ydieresis ] >> /BaseFont /Courier /LastChar 255 /Widths [ 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 ] /Name /CourCBF~1214729045 >> endobj
+49 0 obj << /Type /Pages /Kids [ 1 0 R ] /Count 11 >> endobj
+2 0 obj << /Type /Page /Contents [ 53 0 R 54 0 R ] /Parent 1 0 R /Resources << /Font << /F1 50 0 R /CourCBF~1214729045 52 0 R >> /ProcSet [ /PDF /Text ] >> >> endobj
+53 0 obj << /Filter [ /FlateDecode ] /Length 1022 >> stream
+x⁄≠WMs€6ΩÁWÏ)”Œ∏™¯) 7[M˙iè∆fõCßä\IhH@@´ÓØÔê(%[SzÜ2I o˜Ì€] ÄÆ€æ}A4Ör≥fÊøæzÛ5î¬ªÚÕÁÚyP‰Å≥40 è≤êëâ3Úı^»èÅnåo‡{)˙º¯*'C≈r?PÏú}¿øzT÷B¬Btr≠Æ!ã”b‡¶|[¬/’J»J…P˘Å"G⁄ÌbyQR¿E◊O¯πEÆÿàGSG˛Øª¶“HN$iû\AöÊ›ÁY˙B§û#ƒ”i· Ê.àÇŸ˘|∑Ü¡E/%±KY’ö’Ëü?1ÀBÃ2«È)Ä¶¥|∂Å|º+óéo+^cwk·ÒYiÏ‡QW∫WÈf$dYêqñ8´â5î[¶‡;·üÖºûÊGßÏjç®{#GP;¨Ÿö4áπF…Qôse›◊[?˘È|†nX ËæÁL?_B“•Y¿T›+≈∑ÔUøŸ–{z¥0~à">B∞n'≈⁄¨ö |gBƒVΩY√∞¶çü±Ù€ÛñuLc3ÒØ<îè4s$ﬂ¨à(ÒLKìÙ<∆†Æ¨ÈÜd< ´3ÚRN^ 	¢6Ú∫Çá˜óÑ~îx†äò≠V-S[g‡∏∑´@G∑÷“Oﬂ¥˘Tã∂≈˙H·9‚qáÊ@8∂¨E`ö÷$≈∞%qCÅ®4AIt¡^Ùm+Ñ™iË3ÖêT≈:º2÷xÅíCì! .4òË3ÚÇÑãÔZ¬#¨â9¶:K£¥yã“y„•	õ≠¯z+î_∆I1$ãs}<inÓoHá
+q4?∆lê¿ÏOlfî8¨jŸ?eipˆLoM.∫—~ò|–Ä∞Æ‰ôÃÚ∞ÎèÙû7ïl‘7ñ¶¡[c
+[R P6à@êYÚkkÙ∂zBäw-:¸ﬁx¿x”ü¸
+Kí@yK∑§µ—(w!®˛êÌ˛Q`ªëLÊ¢â≠gR4ΩKòº˙/ˆ≈ÛÅπÿ 9ë˘ä§-+Wˇ'†YqjlÒƒxıi/;Ô_ßûwPûüØâQ’YJA}ƒ5í{z˛≠j©<J˝@Á≠:û$»öÌJÈa∑Ú“xç •Ò9PjaSÛË¬´bî˘ÅíA∆õG¨{IΩÛRA¯˜Yq4à¡xsS‰bﬂb≥q˝Ùµü˚ÅN;èÃ∆gç¥´®Q]íEc@—¸Lôï˜Ωê1F’Áı∞#@E|dìñØ/Ü
+ÌH¢,P£–N$Je0ä€’(t4ùC√‡π0¥üÿÍ-á÷‚é|ˆxTé_‹+ˇ˜ËÛ˚≤⁄ D8/û¸»Ò
+endstream endobj
+54 0 obj << /Filter [ /FlateDecode ] /Length 133 >> stream
+xúSPp
+QPPpÖ
+`é°Ç*Y((Ñ‰B˘EÈ
+˙Œ˘•EŒNnuÜFÜ&Ê@&¶
+Ü@%i
+—
+ññ
+…E©â%©)
+Iï
+%%V˙˙ÂÂÂzEi…eô©Âz˘EÈö
+±
+!^P°6uÜT¡-ë`[”Åÿ™ Sa(}
+endstream endobj
+5 0 obj << /Type /Page /Contents [ 55 0 R 56 0 R ] /Parent 1 0 R /Resources << /Font << /F1 50 0 R /CourCBF~1214729045 52 0 R >> /ProcSet [ /PDF /Text ] >> >> endobj
+55 0 obj << /Filter [ /FlateDecode ] /Length 1277 >> stream
+x⁄ùWMo€8Ω˜WzX¥ÄÎµ>l+{kÉÌ.vQ46Aì#çc∂2•%©8Ÿ_øèî,πNhuc‰†»$ﬂÃ{oÜc"|ﬁù”Ø"äftæ¢ÂúñÓ©†W_>ú“<N3>gû¶˜j-TŒùYaCßU¡ÙÖo•±˙aX˚{£ò‚Ÿ,{ÒöŒø—˚Ûá@ãìÃÖdãëÀ‘/à¶Düî’U—‰VV*ºaèú8oìGOÂihUÈñÜ-k¶ï‘∆R¡+©∞P*˙
+÷¢Ï$πû–v-Ûu(…v@[a»47ÜˇiXŸÚÅ4◊•p»7˛¿$]$◊HÒÔµ,ô§%°¨Ãe-,÷ÿµ∞aîx±CŸTà7˜9l´¶ƒ·L¢(pBu«ö¨‹0]]Ω2Ãdÿ≥H1U´!Ä´´◊Äá±¢táU»ÇTe©÷’ùÑ;Ñ"æØKƒli√9xïf„©‘ﬁ7¨•∫≈*d£E˛ˇÑQfÒ≈Æ+”•rŒ$ƒ¬;V∫ZVê°Zã;F≤¨®nnJi÷HPAÑ˘Io©öb(¨≈ óOÃñÙNvG¢ttâíLÎî6§0¿≤ó˛cµe∞≥Hd”8eÈ”€øﬁvºËá	S+0tÿÀCz¥6Ø0∆¢˛ÜoE∂"Q◊,Ùë∏ÊÈÒ‚òß=˜ÁkÈÈÌHpŒ◊è¢˜í:{oµ¥ñ}k.Î0B“s_k0£,≠Qı+]m∫dúm@`ùm4ªF∂Ë< iA£(Âøà›mÔCvJ¯75w~¡£*Ñ.Ão–0¿¨ßùwÌcﬂmÏ}IM⁄«,[tèi∫»xÃûÈI_f~«…<ΩˆÌØ7‚·Cù¢ õçcÔ°èÛ,⁄Üêb#ÎÖÓyÒñ˜Moüt®]±ã”˛®G”e/v^°˚‡Ä =m–z√xÀ‘“r´∆}-µm	M…ΩŸÂg¬ ÛlËº1\ﬁ´Kê‹ˇi“Sˇå÷úÀï˙~'©kvOhÔl@•qÒã0Fº◊ﬂ4ÛõZhÎhõ±@°˘ó7ÏÏØ@Çñπß€0æ∑t9ÇUÜΩUAh…5Ùõ∫“ÊöÍJ∑≠F@ıÔ™⁄¬cmµ‰•0˛“zIN≤A]Ω€áﬂpπ¯ùÌ[ﬂÙùölÖ,˚/ZGª/ú◊ÿL¬8Y_rïEé:ıwÀèÅzP∏\5¯¶cI—≈doggŸãÔèr	~q—&y\Xùd—;‡ÄîßËÚÚd}¿ë|/6u	Nì)Pß¯ıÆédug£?? Ã«∞fpˆÒ~ïÉŒ≈t>ùπ$÷·y?
+Öå0ã¯K¬˘S›≤Ôûa†a÷Ÿ´F?Öπvbúû˙õ™ÎOÊŸrF¶ú~€NX3≈åﬁ9ô=„nàù˘›5zÍ:F¡m€/GÊË∏‚©îÉCºÈß¯Ic#B<å>ßtÆπõT˜ÆŸó·0^vM»≠%#É˙ﬁÖ^ñÌÿvµ∂°¸>9£s∏‰+¢So‹3x¡„wE√ΩÌbv]ºª»PÃZ≤iÿ›8˙Aiò£’7∑´Î]Êœ(ë:àÜÀ{Ø¬ók4a5J˜Y=Î"¸	^ìÁÚz»¬≥Òœ0{pﬂ<É◊ËˇÒ:ˆzÏ'Ùr§†ªÀË£P‡å~°?JFSR˝œ¸wòÈ¥—⁄1˙Ÿ?√}æ~ËﬂÒuèCˇat™R
+endstream endobj
+56 0 obj << /Filter [ /FlateDecode ] /Length 133 >> stream
+xúSPp
+QPPpÖ
+`é°Ç*Y((Ñ‰B˘EÈ
+˙Œ˘•EŒNnuÜFÜ&Ê@&¶
+Ü@%i
+—
+ññ
+…E©â%©)
+Iï
+%%V˙˙ÂÂÂzEi…eô©Âz˘EÈö
+±
+!^P°6uÜT¡-ë`[”Åÿ™ Sa(}
+endstream endobj
+8 0 obj << /Type /Page /Contents [ 57 0 R 58 0 R ] /Parent 1 0 R /Resources << /Font << /F1 50 0 R /CourCBF~1214729045 52 0 R >> /ProcSet [ /PDF /Text ] >> >> endobj
+57 0 obj << /Filter [ /FlateDecode ] /Length 1164 >> stream
+x⁄ïXMs‚8ΩœØË‚∞5SEXlc>r#Ÿd7;µŸT‡ê‘$a¨Y#SñúÑø›≤1Él≈ó,Î©˚ΩÓ~ Ø´9¸~ÎÅ◊á˘F!åËøæ>ﬁ^CË∆∞øfˇÃ‡F&LF<Üôf∫Ppù≈˘J(ùo˜kˇ.$øﬂ˘Ûüp3ˇr
+4úåê}¡xÿ≤`40.<X±Ê9”«GSˆßá˛ÓiºnXî@∂ùp‡RÁÇ+?
+ö-R9ﬂ‰\·=≥& ÷!ôô§«ò&Ï¿®bÒìGö˛^Dî9&c`sÕDZ€ò¶i}éwÅˆF´Ì8¡¯ ßêj√#±òç(eJ’{wnÔÙ<›Ú@vxMΩœi ˆºA©˝ö√	%a[R¡K&™Ñ•fêæ_fiöΩπ¬ÃΩº|ù„Wª£XÅ¬IMÃ·∂2”eÆiﬂ©RY$å¶Æò—ëË+zz//ﬂÏ £ëá√:°¥È%ÿ.Sâ^I‰6ÀÅ∞ı&Â]˚˛·‡Ä∞Ü+Ë===ıûüüœNDÉ©—Iì˙¬ÅÔs(ÃÛ≈– Ù?r¢ÃR‡OΩ∞◊∑„xc7 îD‘çÁÄ†ˆîıáüèÊò{ô&-e6◊ÑÕäıöÂ€K@=Õåú`Œ?t%ERYâJâ;•LuMã¥√å˙Œ©‘¶jÕYvù∏PT€yukqa«	)3‘®${ó‘S∆B‹'¿8ÚÇ¡0xmHÎ¿ë3SõguQe¨‘é(p,€™òkÆ[QÎb÷bïhX`¥ÿ®Ï@æc·≤4ì´R‘Â¸kî_e"¨ÇIÕWSèΩlK$á=c«;v∞1Ö=}'	Ï{Øe‡Ôâà;÷»ë3°â˝B,M∑¿Í¯{‘ÂÒŒömÌ CgæTVôxciAÑ„î)ËLÂ∂C≈ﬁπœÏ¬B« ]â7.;xˆ˚Á7óefÑ»L^“
+Wÿq« M—a" ùÑÀµàäîÂ›#øF≤∑„¯CwPŸ∫í÷ë‰L3j(€¿sî¿Y]V,#+C@vîæ£2ÃN~&å.)95«
+‚O˘ﬂe?Êhù0"RU%
+àp<.0Fé‹/—ô·÷ÿ±[(61˙nlFƒ˝›Ù~ä÷º|˝∞…◊Iû´§ƒ Iee∑é≥{z‚ﬂ.2ﬂ’m——cëW„ßövw7≥?Ì=’Ø,ñ}¡ﬁ˝¡Uîãm~∆QNi Ê´WÌé–‹÷}Ø≈Õ˙{OÛ»ó<Á®Ò≥ññ8´Óó9Ê˚#ÀÕç÷õ|"Àf‡É|)‰æ«÷vî±cïa2ã4¶4}	75G»9O˘kòΩû´9™¸_Tæn‚È±òeÃÚX]ËúEˇu±»Té≥9*Úúÿ‡¶ÿa—,£‹%R]&RÊjèPm≥≥]`¬¿°€ÈöWŒÓ4v4Wè¥áˆ7s®I©_·Ì⁄˜¸ñÚÛ⁄<O€Ôm?wå⁄ﬁúÀ˛≈$:>¯æß\"euLRØ+ä™ú¸ö≠d!É◊˛Ü¿t·
+endstream endobj
+58 0 obj << /Filter [ /FlateDecode ] /Length 133 >> stream
+xúSPp
+QPPpÖ
+`é°Ç*Y((Ñ‰B˘EÈ
+˙Œ˘•EŒNnuÜFÜ&Ê@&¶
+Ü@%i
+—
+ññ
+…E©â%©)
+Iï
+%%V˙˙ÂÂÂzEi…eô©Âz˘EÈö
+±
+!^P°6uÜT¡-ë`[”Åÿ™ Sa(}
+endstream endobj
+11 0 obj << /Type /Page /Contents [ 59 0 R 60 0 R ] /Parent 1 0 R /Resources << /Font << /F1 50 0 R /CourCBF~1214729045 52 0 R >> /ProcSet [ /PDF /Text ] >> >> endobj
+59 0 obj << /Filter [ /FlateDecode ] /Length 1143 >> stream
+x⁄çW€r€6}œWÏ¯!MfdïW]¸÷∏vÍvöxl%”ô8	Yh(@@À˙˚Óº(J öOÊ‹≥ósŒB ¯º[¿Ø◊1ƒ,V0ÕaJïÊÓ˙Ú$õAˇ‹ˇΩ∏Ö+πf≤‡%‹[fkó™‰p«Ö±zﬂü˝≥ñí(öΩzã·jÒÍh2ü9†ÅŸd‡¿4s(µzπ÷r}?yk¢‰“
+ªµãÔ¶˝bµ©YUÌ√8ì§≈9˝P‹Rı°Ä’v≠Ù85è Kg-Ï%ˆ¸ëcØ•’™™é ¸YyÖˇ¢Ëæ√$ìóU∑R⁄wnÀ±≥B…1¡;QU∞‰aî8{ ŸÕ’˝˚3“ó¡ßínÆ◊Á[≠ ©â^8®vH&<û|>0û|⁄çÁ7	¸ôm∂ïÀï·õ$145pâXöY‘åÒö)H3ñ-Ò¸N’Uâçª„LdêÁ]kIå«
+¯gç£«Y◊≤{_¡Ç?€.∆G,@C-Kæ≤}8Zu=1F¬UΩdFáµ_PÀ¬zÀ„Æ≥øsSh±%¶sj#	©€JV˚˛üaåË$Îπ÷»v 	~c¡¨õ9°Y $I-√3Ù Ê'âø[ãbÌìv|Øò1≠Ü}X◊7©v2L’l÷ÕéØ∏ÊËœ, 'O≥I
+op~≤d∫ƒ^iV|{xxé:çNπÎ˚1|fu©y-™på¸ÿ¬äC#©ü(+ ~ñ˙÷&„dL•?	æÉ[≠
+n‹L‡æfUÕ√åÕíd $Ó⁄pÖ©nºÆq,∫›zL„∞û—âÌV!vU©ùõ·Ÿ˝°[Q“˘¨·µ–º<É“Ø¢©}¡ÊI2˘äÛBﬁ·^©◊# cãS¥¢‡#<l¨Û 
+CÕ:ÊÊ\r-û8¨¥⁄ê¢<KŒKÏ‡ÉíÁ˝ˇ√(˝n>äÅma∂Y"{'1C¯(-ﬂO‰oy†7ÕY)N,Á¥_ŒÏââä\uÏw‚VYà-´`[Î≠Úõ‰˚…	áÕûî[Eöw@ˆÆjÉÉDì/›[%
+,âmî|ÑR¨ú˙,8˜4q≥&œ0Ì˙√ÙÎﬁ∞˜Ê>ùà#ç[q§NÆ`GB¯¥-—ó√öH£M$Ûﬁé®¢Älÿﬁy¶,Ax_”º‚OL⁄p¸~µvTs"k1|•ˆ‘
+πù,“ä‘‡.%D”p¸…‰á¯M˛≠Çé2_z{Æàüesπ
+áÔrowò”«÷Â›ı‡C,◊Dñn«Ytk·maú~w£U†…Pão⁄±˝§≤~´–}ÉVVøì-nyZmaKJ˙]ŒüÓÚC)—çÃåêˇh{$bÎØ<˚Cı6W—Ô{Í◊=Û˘ñËÖÔág-
+2B“Ps”ëp•È§'É”":dX4I4 ö∏Y÷·≥iƒ”Åkcú¸Ïâá÷^ú%9¥”‚x …°üfCøÃ¶6û˝CKxU\§n˚º„∏Ã.kÌÃÙ∂Ÿq?^ûæ‹2ºRd_;¯‰£a
+endstream endobj
+60 0 obj << /Filter [ /FlateDecode ] /Length 133 >> stream
+xúSPp
+QPPpÖ
+`é°Ç*Y((Ñ‰B˘EÈ
+˙Œ˘•EŒNnuÜFÜ&Ê@&¶
+Ü@%i
+—
+ññ
+…E©â%©)
+Iï
+%%V˙˙ÂÂÂzEi…eô©Âz˘EÈö
+±
+!^P°6uÜT¡-ë`[”Åÿ™ Sa(}
+endstream endobj
+14 0 obj << /Type /Page /Contents [ 61 0 R 62 0 R ] /Parent 1 0 R /Resources << /Font << /F1 50 0 R /CourCBF~1214729045 52 0 R >> /ProcSet [ /PDF /Text ] >> >> endobj
+61 0 obj << /Filter [ /FlateDecode ] /Length 1177 >> stream
+x⁄çWMo€8Ω˜Wz(Z¿’Í[roIêv≥ã-Ç⁄X8hr†%⁄f´àÜH•õøCR¢§¶îÍãhÅú7ÛfﬁÄøÀ-¸Ò1Ä¿áÌ≤2µ*·ÌóèWêÑq√oÛœˆÆÎ©Z¬FŸ
+∏‚%Ö/Ù»ÑlûáΩµ5Ö–˜ÛWÔ`˚Æ∑Ø~J◊πro»”ÖY¨7Ñ^Ï‹‘L2R¡ø§j©pJ√´â! Éÿû(∞ŒÏì6ﬁÄƒ◊EEÑ Ró ⁄˝7ZHı|_(2$ŸW∏ì4∏‰nò(ÔaˆŒ¸‹VD"≠áÜ?Ç@Éå◊?¿WLEß—π9”ÇXA™Íy•TπQ¬¥GQ^èÇΩ›nÁ›››≠ ñ*†§ˇkÉΩ“¡n0@7P˜@WñcoºÛ|É≥ÛÇ~ˆãH/‹~ÿ#Ï0·›°§_§C ;/õ∏øÈ2§PŒ9!íµMΩˆﬂ3%†≤∫AœFˇì¶§¢hÿY'JAQRúÄ÷JπO≤qÓ%˘Nkì˜q™ØsL†5h1◊v°bsC§6Ò=–Ü¢fW™FôTe∂ÜOj•-⁄≤ DT†¥è*^DÂUe∂Õ¢$6Î7◊õOÜØFó$‘}º`∫¨K*	´ë¸JNnòÿ¶~Fqû˚|‰œk>	Úﬂ–¸u›>“Fá3n~ΩÀ—~Ü+ﬂfd™ˆŒ#Ò:û˜;Œ-1íﬂµë†«oè'\Áì.≤Ç˚˚∑Jàæë°ﬂÔt£dV†’xπQÆ=´ˇ≈F≈„óëó¨¥\%…ß(±óÖè&∆`:yô™óΩÚ}7BúéÜÛôó›ﬂøs∑û8Z ChÛy@Í#/∂‰Áy˙`∏ºı<^∞PØ—⁄ry†H±L[§Ä’>È°1‹‰}ﬂJ¶‘1ÁˆÑ'ˇâ1™⁄ ÌfÉà≤“¢‘í¶Ê∑…_‚•+„ùy¨Õ#Ü·Íe¨©&ôToO…:âu6Z¡Í£éLuv”Ü;7„Fb‹HånúhRø €X{ã,π[S.\r¢a∞æò8<p±c≠{	NÑíXM51∫´Ú¶°‚ÃÎR≈àQœx?L◊…ê¯• ≠<Ò∆=4ú0·h¬¢ÂnhË¿01ÍŸÛ'™@Ñ
+íÄêBöRºó)æC…Ï¬µtSfÀpòç3›˛b^óD∞b“ÛÌºÁ7Ã0á¿z0⁄_£Ö±™Êòé¯»û6–%ÄÑÚ»∫dçÊ ‚ﬁπ4√a^’%TM)ß’ES\?ÁX]puíT_ª·L…
+úhçæíÍe3W–]JâÑAb«æ≤◊DO(yd«ì¢x–¨sDh∆◊	'L∞∂¸è-Æ‡«â©ã‹‡)ö3·æ˛åΩQg‡5§V;0]”3M2Ü0
+¶=óDˆ-ÂÊ‚Ûﬁø∫è£~‡Ë-T+X€ó4`xD∫q≤âvJ÷tΩØSéì˚t≤†ä ^ËD¡“¬ÖO´`iÆ-}.}.çún‚¸IjÅ"{W¥∆˛oøZ/©êp’bª√l‹bø¡∫¶‚˜ıñ`«K,¸§u0
+endstream endobj
+62 0 obj << /Filter [ /FlateDecode ] /Length 133 >> stream
+xúSPp
+QPPpÖ
+`é°Ç*Y((Ñ‰B˘EÈ
+˙Œ˘•EŒNnuÜFÜ&Ê@&¶
+Ü@%i
+—
+ññ
+…E©â%©)
+Iï
+%%V˙˙ÂÂÂzEi…eô©Âz˘EÈö
+±
+!^P°6uÜT¡-ë`[”Åÿ™ Sa(}
+endstream endobj
+17 0 obj << /Type /Page /Contents [ 63 0 R 64 0 R ] /Parent 1 0 R /Resources << /Font << /F1 50 0 R /CourCBF~1214729045 52 0 R >> /ProcSet [ /PDF /Text ] >> >> endobj
+63 0 obj << /Filter [ /FlateDecode ] /Length 823 >> stream
+x⁄ΩòMk‹0ÜÔ˝:ïñl∑˙òëÂcJKKHˆ(=,7›RX;Ö@~|-Àk[≤¨µ∞Añ?û—;^B™Î|C>^1¬(Ÿ¸"	íDèÓ…ªõ´ÇÈÆ€oõkrôˇﬁÊªÏû‹ñ€Ú© è˜π…ˆEyxÓˆ~y 3¬)UoﬁìÕrπy„Çd™j–¯%OlH†ﬁP·Œ>4W;pÔœ¬s˙n$˘Ù¢∞Æüä‚qWœ∑≈~Á[ŒÈªq“‘8¯≈Ú¥µ`»#saêP®}∞}Ωàæπ˙> ‚≤µvA.qts ƒñÌâ·nM◊¥>ﬂ¸Ÿ≤ËnÕÃ¬˜«≤?«Ù ê≠Vg¥S„∫á˝ø,üÂ:LTﬂ"∂Ê«oüŸ,=@ ˙Åª9 í“°p„Àu“„∫$Ñ∞êÎÄ€©Ó|m7•ãx'ê	â•ƒ¿,1p£ÿ°∏Q	"Ô[$¨π0àJ∆utU˝È=T7q^˘¥õk‚h
+“(1p˝≥\ä«Ä†≥(îDâ°ñ„<™j◊ÈÿãÅ%aƒ(úÃ å¬¨8F9ïÍ<e‡‹∂˝qû2môòbeëZôö3‚Ã9#0g‘93Q&Ñí6]o§«ueB$âAHKxLiU∏Ù“ç^0/¨9ìh)≠k *Bü∏>
+Æ„√XJ=su— °º ±Ú¶õÊ≈ùlÅS\Ám AêòôÎ/HiP:âπeBP_ô®=T˚ﬁóTgÅ∏∑Å¨=‘‰I´˙P‚Avâmpè5ûıÂç”ñÀ®Ø	üÍ&Z◊@˙Œm"xhÆºy\âÊÇÿúûaéÍÏM5®Rö£:È©∞rÿ÷éÉX∫Pô` *rÏCL˚lË[Ó«T ‘o ıˇ‚H@Iøx	ó	◊@˙ªW⁄¶˙ ‰kA”*,ãk GÉ∏	∞ àÛWÉtç¬ìg◊@éÒ’ù˙¡Ô‘Ô}M∑¯≠©^ˇºÕãJ√o…◊øY^ÏÛˆÕŒ≥¢$OáCñó‰˙∞›ï˚]F◊èÎÌCF‰œñC˛YŒ?]
+endstream endobj
+64 0 obj << /Filter [ /FlateDecode ] /Length 133 >> stream
+xúSPp
+QPPpÖ
+`é°Ç*Y((Ñ‰B˘EÈ
+˙Œ˘•EŒNnuÜFÜ&Ê@&¶
+Ü@%i
+—
+ññ
+…E©â%©)
+Iï
+%%V˙˙ÂÂÂzEi…eô©Âz˘EÈö
+±
+!^P°6uÜT¡-ë`[”Åÿ™ Sa(}
+endstream endobj
+20 0 obj << /Type /Page /Contents [ 65 0 R 66 0 R ] /Parent 1 0 R /Resources << /Font << /F1 50 0 R /CourCBF~1214729045 52 0 R >> /ProcSet [ /PDF /Text ] >> >> endobj
+65 0 obj << /Filter [ /FlateDecode ] /Length 937 >> stream
+x⁄≠WMè€6ΩÁWÃ©H«)…í{K6õ∂I,÷:Ëˆ@KcãÖLπ$µ©Å˛¯eY÷z#qDÉ"©yoﬁ|ê†ÁmØﬂ3`dHbH‹®ÄÁ∑ÔØ ÊQ
+Ágı)ªÅkU
+ïc++lc‡™.nq+ç’áÛﬁçB‡Aê>{Ÿﬂpù=ªZ,”h|C∫lH¢v¡˝Ãì9sÉ(f3˙âf-è„wÉ8`0∫¡Á⁄¬Vﬁ£r”„@~Çìë8‡3˙	O@˝<Ê¶Å‚‡k@!a{˜√~Pò>î.:zøn‚ìLÉπ≈7H«_ÒË·3X8¸èÿE2$ó$OÈQ”ÿ…usÀ„\Ù†Ä_d]‡æÂ·#Èk(cíªõ„.E9eNÚi†x\ Ö≠Ω¯1PÙ–£oî.N˙dx˘™{˙¡Â˚ÀÈ9˜6¥T¥£ﬂ1Ò<ôXWl‹Rƒ=PaØnV"lÍ™™øHµQ“ Zâ
+
+‹H’æ(≈=¬)ìt€ÏPSî
+lâ„¨U≥C-,}déç3wç”:7Ê-É¥…jâC¨∆<%ËKL™¢i˚iÀ∫± ‘ˆÕ∫í¶t»{ÃÂFÊ¬π45-£iÌ¢¥/◊˛æàÕ±(∆øNzÂWb∑ß0f¯ØÌç\´\ˆé!|F,∞7˜Úæ1¶Œe+ÔZôE&ÀTù„V¢^æwhr-[ÏûNVJ„tu™Qhl)ú™@åQª!πk öΩñ˜"?å£Ñìô]âj $’∫ÏB^ÎÇ¶lÌr¿≈üÚÓü)Ò&·|
+D4dFŸ.˛∞√úérivÛìó∆π±ZVé∞`
+C*ã y∞©uÀ‹e"‰
+ÚÖDª 1
+.”)òûª!Úo»æ$õ«‡hÃë:æ9¥„ÆÑÈbRÆ‹RL-Ç Éy£•=tq2M^Ç0ê˝ærä’.L„(IÙ‘†®Ìå¬¬Z‹ÌÌ)ˆ¢À1‘„˛$µ∆k><ﬂ<nqCÕçÓxÉ∫ÓoÉwwœﬂRÈ°ù‰{Ìd ÒÓÓ≈∏ÌÛec’¨wí‹”€Ÿ~ †ö¡á9|¨P9ëÁ≈9µE™qjõ‘æ[£ø]Ø~ˇñy[xNﬁù…„œ≠ñ˚Œ@{Hrﬂ—∆CIÊ#xH2ﬂ¡RIñxH≤ÿCíE>í°è$˜ëdíæˇ0æø0âáaW◊«˙ÄüN’—◊N[ãW]-ﬁtµ¯∏¸y#®Píøz¯'&D•
+endstream endobj
+66 0 obj << /Filter [ /FlateDecode ] /Length 133 >> stream
+xúSPp
+QPPpÖ
+`é°Ç*Y((Ñ‰B˘EÈ
+˙Œ˘•EŒNnuÜFÜ&Ê@&¶
+Ü@%i
+—
+ññ
+…E©â%©)
+Iï
+%%V˙˙ÂÂÂzEi…eô©Âz˘EÈö
+±
+!^P°6uÜT¡-ë`[”Åÿ™ Sa(}
+endstream endobj
+23 0 obj << /Type /Page /Contents [ 67 0 R 68 0 R ] /Parent 1 0 R /Resources << /Font << /F1 50 0 R /CourCBF~1214729045 52 0 R >> /ProcSet [ /PDF /Text ] >> >> endobj
+67 0 obj << /Filter [ /FlateDecode ] /Length 1346 >> stream
+x⁄≠W]è€6|œØX‹Cõ ékI˛–ı-π$MR8‰\†@.¥¥≤ô»¢JRv¸Ô;§$Î.-Â≠üÏ;iGúù›·ÛrM?Ωâ(ö—∫†’ÇVÓ[NO?æπ°E<Oi¯‹}Xﬂ“Îj'™ås∫≥¬6ÜnTŒÙë∑“X}Æ}ﬂTLÒlñ>yFÎ/Ùz˝‰{†ÂuÍÅ¬§À¨Ê˛¿πß¯ô~üÆ¶Qæ{˜wﬂâ}]2≠˘õ=˘Õ∞¶Y¶ö “+iƒ¶‰<\l1ÎãΩ0FeRXP¥FfdZ¢≤ˆÒ"\%I˚*ØÿdZ÷V™Í¸HwjœVÓŸê s2ñ˜$ÚΩ¨ı¬*MGYñ¥&´¬ Ò≤˘ªOﬁ¯X˜˜Oy∫ùN(o\}*EˆïT∆âÊc8µ8Ìπ≤ Mà2g%ÅΩ—,æ>ó	ãc÷vÜô≈c0l≥È˝˝≥)—z'±÷‡…µÇTñ5«+,Bõ,ccä¶B-ÆgcP¢±;úHf¬uÕQ$z6Ûû≈Ó9¬´tBVÖ“{C ¢¨î@√Wa˝ÔB»≤—L8eÕz/*¸7å≥ûTñæ™¯™¨»¨«ï∫”^∏ˆb¥Òè%ñ∂‹†öÊÁ\y÷¿÷ªë3Ã„q!£¡ÖVò†T¨1çﬂu©c-íåˆ¸∏cP>¥Û≤acI˘…uΩ¿kÕ¶m’NîéOã1ıN√ÑJX¥π•⁄Bîπ?û[e$VŸ)3Ì˚}9’êk€Ëu¨8ø>w˚#Ép7√6ÒŸF∞>^:f0t⁄ëQk(Jfå·◊Ná›lˆª@?®Ωû“[QÅ⁄	Ωü“Ø%WFV·b´s'o`a[ˆ≤÷™,}—wØÔ~	ﬂª∏‡UÛ˘Ú¢Õ√w'Û1+ZÎ∆∏±(ΩdÕN÷¯ÒG#ıà!Õ„¯üR≤ò∏ôóäfcÆ¥ÜÙåÎé1NÚ·:Ï–Yh.‰CYπìÅíÎ—xD¿Q⁄j€ù‘˘ÛZh{Íë1JÁ¨√0ÈË∏ΩÌ≠¿‹÷àN+|ﬁﬂteÊd5?HÛ‰†÷k≥ÎåœÈ$•¬Ì≈≥[ÖQñ£˚OúK«◊ƒ·hﬁú®©s0XmÈ∆íM?áÁ:Õˇ>◊…ês˛˚\'Cû˘◊sùt%|Aó.4˛éqF	°›@É+∫Ucﬁ∏ã·≥a¸TbD _◊ù(ΩN>Oz]p∫åÆ°Ωp>`≤Rô∞„¡ÈEﬁ
+Bî]êh-PlTcißé$‡XêπvWÏaå} 	,Ò`ˆŒyÿe:∑h¯˘µ·DP gJª”™ŸÓºÓ˝Àƒ√„Ñ•wFæ`0È¢:AÉ™'˘˘ƒﬁÜ*6Rçü‹F¿vGn∫÷Ü{ˆk»gì∑‚‡Ü	uç´Ï^ÅX∑-Tx˚ÒCﬁ˘ˇ¡çFMJ3Æô¡ü}òßZ∏Ûcøu*±ç≥˝°@$:X"9ÎGÉ[?îÄﬂyVyπﬁÂ¶sﬁwºAfXôøx√ˆ»\—ïa§¡ª+e±”ö*øÇ¬r∫⁄à‹Gã#ˆÙ^'¥cÒq.k#˚+ï5NPaæ¢¡‘s.ê+Q…<fßù≥SMôC’_ëê—
+∞§]z´⁄M+Õh:ãÁˆ˚∏eTßﬂ÷rå*Ï—Î®Ÿ|·Ã:>Ò>·Ñé˜€ˆ≈5[#å1DQ;kÁŸ˝2Û
+F£-2¨%˛}√Q√3%6[_™(∫∞æ.Ωø_z}_]x¬ŒﬁZ+†z#8€Ñ∑ùõŒvn;€˘´~∫u˛ù~>„–üÊ∂ç;
+endstream endobj
+68 0 obj << /Filter [ /FlateDecode ] /Length 133 >> stream
+xúSPp
+QPPpÖ
+`é°Ç*Y((Ñ‰B˘EÈ
+˙Œ˘•EŒNnuÜFÜ&Ê@&¶
+Ü@%i
+—
+ññ
+…E©â%©)
+Iï
+%%V˙˙ÂÂÂzEi…eô©Âz˘EÈö
+±
+!^P°6uÜT¡-ë`[”Åÿ™ Sa(}
+endstream endobj
+26 0 obj << /Type /Page /Contents [ 69 0 R 70 0 R ] /Parent 1 0 R /Resources << /Font << /F1 50 0 R /CourCBF~1214729045 52 0 R >> /ProcSet [ /PDF /Text ] >> >> endobj
+69 0 obj << /Filter [ /FlateDecode ] /Length 1076 >> stream
+x⁄≠WMs‚FΩÔØËÚ!ïT±}"›Ç)€ªõµã6{ÿÚa,50±4CF#XÁ◊ßg'&©äRwø◊Ø_ :ÆóÛm ¡ñ+'06ﬂJ¯q~;Ö$å38ã˚ÂnƒÜâKXh¶€¶≤Dò„ö7ZΩúÓ˝‘
+Ñp4 ﬁ˝Àﬂ·f˘ÓÔâ“<≥â‹7d©ÁÜqloàá ì‚Y»}ÖÂk∫q?îÜû®IG Å¯∫·Çﬁ $ƒ+©ËÑ7†épõçl´6láÑÖ¨ä
+ô2?(]Ω∏ìDŸ1	[iTç¯é‚4zÑ=kÄm∑JÓ∞ÿ‰k%˜zreœ
+C∏fO∂2%€ı∆ù%L˚,e…5óÇUP ¢µ%Ï•z¶K‘- ªeJõ<X3^π√Ò1,Tº`]d˛ß˝b√<aè–nK∫,÷Ä+"ê≤÷¨¥§∫„è¬c|Ö¥\ŸñB›®•:pLM_Z:ÍÃÅÅ|ÀÃ5.úIíºo≥ﬁ»˚Úò2å3ç´∂™^ÄùÑEÌË¢∑SÙìIWc˝Ñ -∑d‹7˙P GΩzﬂ‘z˚Øã°Tk0dÇ*°öniÏ˜5Î∏ú”á[JI⁄7˘´
+µëƒ√KRl€'éL¥∆®T„wmıå…é PÁâÓ<I|"{›ƒûIK¢Æ	Åû„
+í±\†2F2JÒä¯ UM¬€·øâÁÒÂÿq÷kÚ$m¯’–Õ≈ >pµ‡ıñ¶Úû⁄	K≈DCia¶§ñÖ¨Æ`,’<8pg˜¢<;&[E…L7Ÿq‚!'é”s ù◊¿o¨-∂º¿ùÅ–ªª±xi4÷ÁNﬂ\](>äﬂ(ﬁÄ6…à#&ZF¶I@¢@Bèj‚`Ù
+Hñ•dRU4.∏1(&næk”„í˜ÿ4lçpkaU∏‰ÃÂŸP®ß≈≥‘96[ö√Fáèj¿∑⁄∫ÅAªFæΩç„sÑ‘πåvÜ0Ä©Axƒ¥hüjﬁòŸÖÎ/ÛœGÿR*3œ∫;•·0ÔôÌQz¡aE∫o8≠7ã ObB∞‡DèTÕ3ß‚Ü÷å&CÍE%¯≥‹ô2/T;^‡	ä;ÀiΩù¶øìñ,JêS€Öt‰Ç™ ∂ïÖ7æ /òAtXP…0$£˘(Vˇ≈j¬‹C^8~E^êÂˇ˜§ÜiÍòTìÏ4©Aû_PAòxh
+„WûôÑ°ô‘Z°H:^v
+¯0§Ÿ›!ΩN—·∫kis—:ƒ∆vÚ´‚ˆÂÅπeFoôÊ«…√Ñà ï®¨íVa_P∏0`ÕÙ^OgƒFßSﬂŒÇÃ=+ŸñFûi|´'»<éå=ä
+|À!à}EFæ"}∂û"}|Æ9ˆTx∫¥óQ¿«››∑Úö4”V)ÛÆ9#´◊∆Ö˛q|õﬂÕ˚<˚e
+endstream endobj
+70 0 obj << /Filter [ /FlateDecode ] /Length 133 >> stream
+xúSPp
+QPPpÖ
+`é°Ç*Y((Ñ‰B˘EÈ
+˙Œ˘•EŒNnuÜFÜ&Ê@&¶
+Ü@%i
+—
+ññ
+…E©â%©)
+Iï
+%%V˙˙ÂÂÂzEi…eô©Âz˘EÈö
+±
+!^P°6uÜT¡-ë`[”Åÿ™ Sa(}
+endstream endobj
+29 0 obj << /Type /Page /Contents [ 71 0 R 72 0 R ] /Parent 1 0 R /Resources << /Font << /F1 50 0 R /CourCBF~1214729045 52 0 R >> /ProcSet [ /PDF /Text ] >> >> endobj
+71 0 obj << /Filter [ /FlateDecode ] /Length 512 >> stream
+x⁄çVMo€0Ω˜W‘mHëÈ”rz™k§≤π˜TÏ†⁄jÏ,ëIﬁ–?•ù] Ä√Èbﬁ#I=⁄ Ò‹ñıé%PæÄí†éo5|~∏ÀA2ë¬«ŸÂñ∂—∂25lÇΩáº´<òmÎÉ{˝¿ÆzkÄí^|ÅrÀÚ‚4Q≤HﬂM“(Ò»˙–tŒÇ¨ÆùÒﬁ¯iJ¬êòÚΩ¸XBŸŸW¯¶≠7vŒ”ûïó%¸–œù”°sÌ9,H±Cë”;≥áÏ∑ôOS®(E[◊{∫?ˆ
+ÓW D)q¶ÀÑƒ«M6	ìræ/RçÖ.›ÓØ!ƒˆÃÒ’¯ÍÊ¯‹k€˛0◊!Ã´Ó0*AÊ*•@ b,j’5r¯ì˚vzNíèc•J(¥˜∫jzoB«÷_≈˚lÄ36Çé»ı·Ÿµı6≤ä,NÄQA¶y$˘ü	àR¥H«¢◊MgÕ5Ãhº
+òê@ÖT”LENf∑ã]õµ&º‹Ï™_gá%$‚R!êi
+é∆O
+ä\Né≠é≠Æë[\b"9&ía")&í "fs¶ë3/√ÃÀ&íc")&í ")f6ö""©BDRÃ83≈åC1„PÃ8òo0€`Æ˘gö˜è(\kz¸K∏5>@ﬁ;glÄµ”Uh+ßÁi≠∑&˝9ÊÅøË ˜}
+endstream endobj
+72 0 obj << /Filter [ /FlateDecode ] /Length 133 >> stream
+xúSPp
+QPPpÖ
+`é°Ç*Y((Ñ‰B˘EÈ
+˙Œ˘•EŒNnuÜFÜ&Ê@&¶
+Ü@%i
+—
+ññ
+…E©â%©)
+Iï
+%%V˙˙ÂÂÂzEi…eô©Âz˘EÈö
+±
+!^P°6uÜT¡-ë`[”Åÿ™ Sa(}
+endstream endobj
+32 0 obj << /Type /Page /Contents [ 73 0 R 74 0 R ] /Parent 1 0 R /Resources << /Font << /F1 50 0 R /CourCBF~1214729045 52 0 R >> /ProcSet [ /PDF /Text ] >> >> endobj
+73 0 obj << /Filter [ /FlateDecode ] /Length 1376 >> stream
+x⁄ÖW€r€6}œWÏ‰°ìŒ(∂Óí€ó“2e≥ë(IOÍ÷}ÄHHBJÅ ⁄—ﬂwﬁ‰$ı†°@jœŸ={# ~nC∏^`–áp≥	ÃÙU¸Â&√ÒöO∞=∞˘Åà∆(¢r	ã4¶‡”=ìJúögˇÃ9Öaø?˜+Ñ_¿ﬂ}4Ωô†ˆÊ”éfcÛ¿2O‰ëù€î!Fèî´ˆ?Náñ'E–ë∆ÓÛÛá≈Û3˛Â@¡±√%Ñ"óÊX˚âwÆ⁄Ìç∫|N+¿¿$ƒiîk Øeæ˝B#*Ö–ÜåÏA¬" %ï@xÇb¯Y§X e;»`\ÅD)WÑqîëq∏]x0õ˜å!˙-¢ôÇ∞T¡.Í†Qeºg‡IÆ©∏ “V Çj ®˛ìâíz{ò&7˝ÀaöÃÊ?ì¶ÆŸ1éîèD«·Ã«Ç?A!ÈãÒ ºhZÎÒﬁ
+¿	ﬁ√ñHV;|∞a±qCﬂπ}7~œl¸{Àu˛∂Bg„¬É}‡ôo{æÿn¥MjM6>‚@‡m‹`„€wp˚§sÀYÇÂ>av0é⁄ækálòÑOÂ©IGˇ1Ò·ªv∞q≠Õ[∂{Ô∏∂Ì;Ó=ÑV	ña√ù,Vñ≥kµÇœñÔ[nËÿAÏø¥_úıœùZ{+«æÎ!ﬁbıxßA0n‡nBX9k'DW√çv≤¬xBvVh(>Ÿe;–`˛÷!$æÆ$m«Öœr◊PxO˚g ﬂπMNˇ*	∂£ÙÎdh¢Ä¥`m˚ã¸i›:+i£Ω•∫A∞¿≥¸–Y<Æ,ºGﬂ€v{Úèo∆óì</‘s∏¢IÇ!'	x"Õ®PßˆÕ:jj<9´©≤≥)Ú6ûBñJfäI–=1„{Sf/$a1S'H»@∫√“∏¿b\áßÙ¡7≠A€Kuª)[ÇG”~∑¢Ñ∞#÷ÆJ€ÅFu=i√∫ˇî}ì≥ƒåÖ¢; R.o}S—Ë¿”$›ü ¶2lkZc;Ã∞Æ$ı¶°Ymè~S˙BøXt–±©6‰<Feé«ÖóÌ(É∫éä†ı‚Çß& ‰Ö∞Ñl˙;ûdÅ™1Öbe8?<9êvî—Mù GÇ√\se»1£¯Ö6ËNèÌ”øŸÓd9s‡J´Z7ﬁv†yù(Ävc\%r$Ø'^dÂ®+ ı”õH_	·Ëy;∆¨÷ób§õ˘fZ∑πºi/¬Q◊f0z≥0$é‰x>ƒLFI*ç/&åe⁄ôz
+h§á°`§UóJe4™Â ÌÈmÀ†‘-£ˆÖVUÙ™ÃC¸<QE=∂c4ÎQ∏,·ƒØ8ß€bh√ûr*∞D´¥E˚XQG&•.ü]	W‘P;P≥rò|A¡3¡t(Nï¬€SSöT»≤0Ö,Jì]»€f”–Y√v,*øIë“¨„ùHèç)ˇò‡±E7∏ŸêˆuqxSk~P*˚Ì˙˙ııı
+Ωÿ]•bÕ2—ûP√Y«Ê7úNhøåø0e6;]â‹Ó–èåËN©’¶cAb¸¥Ä‹¯})´Üì≥›Ø‹hqâÃà2U•≈5ó@≤,)){M?>Æ£Y/ﬁ¥orBÃ4r÷eÎ;[ù≤_s&L_oR°•Y.LÎï
++
+g6!/°Ûëƒ1FL˛∞ûW‰%πõ•Bk¸ı˝£˚Ç–˝é∑ïA◊|Ã;zœ†kî&…6wëuëvëtêÏzÌÎzÎõçª^•Ã˝ÇMã√/)¡ˆÖ≠˙‹b1¡"Bgª'æ4Eæˇ¸„ë=Eg˛≠q‡$)é
+endstream endobj
+74 0 obj << /Filter [ /FlateDecode ] /Length 133 >> stream
+xúSPp
+QPPpÖ
+`é°Ç*Y((Ñ‰B˘EÈ
+˙Œ˘•EŒNnuÜFÜ&Ê@&¶
+Ü@%i
+—
+ññ
+…E©â%©)
+Iï
+%%V˙˙ÂÂÂzEi…eô©Âz˘EÈö
+±
+!^P°6uÜT¡-ë`[”Åÿ™ Sa(}
+endstream endobj
+xref
+0 1
+0000000000 65535 f 
+2 1
+0000052209 00000 n 
+5 1
+0000053685 00000 n 
+8 1
+0000055416 00000 n 
+11 1
+0000057034 00000 n 
+14 1
+0000058632 00000 n 
+17 1
+0000060264 00000 n 
+20 1
+0000061541 00000 n 
+23 1
+0000062932 00000 n 
+26 1
+0000064733 00000 n 
+29 1
+0000066264 00000 n 
+32 1
+0000067230 00000 n 
+49 1
+0000052148 00000 n 
+52 23
+0000048965 00000 n 
+0000052375 00000 n 
+0000053475 00000 n 
+0000053851 00000 n 
+0000055206 00000 n 
+0000055582 00000 n 
+0000056824 00000 n 
+0000057201 00000 n 
+0000058422 00000 n 
+0000058799 00000 n 
+0000060054 00000 n 
+0000060431 00000 n 
+0000061331 00000 n 
+0000061708 00000 n 
+0000062722 00000 n 
+0000063099 00000 n 
+0000064523 00000 n 
+0000064900 00000 n 
+0000066054 00000 n 
+0000066431 00000 n 
+0000067020 00000 n 
+0000067397 00000 n 
+0000068851 00000 n 
+trailer
+<< /Root 48 0 R /Size 75 /Info 51 0 R /Prev 47844 >>
+startxref
+69061
+%%EOF
