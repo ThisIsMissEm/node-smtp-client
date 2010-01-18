@@ -7,6 +7,6 @@
 		Example of a mock server
 ===============================================*/
 var sys = require("sys");
-var mockServer = require("../mock/server").Server;
+var mockServer = require("../lib/mock/server").Server;
 
 var server = mockServer(3125, "localhost");
