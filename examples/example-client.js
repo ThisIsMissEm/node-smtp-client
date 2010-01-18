@@ -1,10 +1,10 @@
 /* -*- Mode: JavaScript; tab-width: 2; indent-tabs-mode: nil -*- */
 /*===============================================
-	File:      example-client.js
-	
-	Author:    Micheil Smith
-	Description:
-		Demonstration of the smtp library.
+  File:      example-client.js
+  
+  Author:    Micheil Smith
+  Description:
+    Demonstration of the smtp library.
 ===============================================*/
 var config = require("./config");
 var smtp = require("../lib/smtp");
@@ -21,11 +21,11 @@ Your's Truly,\n\
 SMTP Client.";
 
 client.connect(config.port, config.host).addCallback(function(){
-	client.mail(config.from).addCallback(function(){
-		client.rcpt(config.to).addCallback(function(){
-			client.data(message).addCallback(function(){
-				client.quit();
-			});
-		});
-	});
+  client.mail(config.from).addCallback(function(){
+    client.rcpt(config.to).addCallback(function(){
+      client.data(message).addCallback(function(){
+        client.quit();
+      });
+    });
+  });
 });
