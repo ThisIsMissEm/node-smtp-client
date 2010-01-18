@@ -11,12 +11,12 @@ var smtp = require("../lib/smtp");
 
 var client = new smtp.Client();
 
-var message = "Date: "+(new Date()).toString()+" \
-From: Node-SMTP <"+config.from+">\
-Subject:\tNode SMTP Works!\
-To: <"+config.to+"\
-So, It looks like node-smtp all works, which is great news! Time for some sleep I think though.\
-\
+var message = "Date: "+(new Date()).toString()+"\n\
+From: Node-SMTP <"+config.from+">\n\
+To: <"+config.to+"\n\
+Subject: Node SMTP Works!\n\
+So, It looks like node-smtp all works, which is great news! Time for some sleep I think though.\n\
+\n\
 G'night Micheil.";
 
 client.connect(config.port, config.host).addCallback(function(){
