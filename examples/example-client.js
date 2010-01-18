@@ -15,9 +15,10 @@ var message = "Date: "+(new Date()).toString()+"\n\
 From: Node-SMTP <"+config.from+">\n\
 To: <"+config.to+"\n\
 Subject: Node SMTP Works!\n\
-So, It looks like node-smtp all works, which is great news! Time for some sleep I think though.\n\
+So, It looks like node-smtp all works, which is great news!\n\
 \n\
-G'night Micheil.";
+Your's Truly,\n\
+SMTP Client.";
 
 client.connect(config.port, config.host).addCallback(function(){
 	client.mail(config.from).addCallback(function(){
