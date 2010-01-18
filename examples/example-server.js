@@ -14,9 +14,17 @@ var server = new smtp.Server();
 server.runServer();
 
 var sys = require('sys');
-server.addListener('connect', function( args ) {
-  var remoteHost = args[0];
+//server.addListener('connect', function( args ) {
+//  var remoteHost = args[0];
+//  var promise = args[1];
+//  sys.puts( 'connect callback' );
+//  promise.emitError("I don't like your type [" + remoteHost +"]");
+//});
+
+server.addListener( 'ehlo', function( args ) {
+  sys.puts( 'ehlo callback' );
+  var hostname = args[0];
   var promise = args[1];
-  sys.puts( 'connect callback' );
-  promise.emitError("I don't like your type [" + remoteHost +"]");
+  // no 'true' passed as final parameter, won't close the connection
+  promise.emitError("What kind of hostname is '" + hostname + "' anyway?");
 });
